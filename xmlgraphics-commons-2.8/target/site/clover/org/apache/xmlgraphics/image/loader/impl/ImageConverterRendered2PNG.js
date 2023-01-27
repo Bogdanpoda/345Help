@@ -1,0 +1,10 @@
+var clover = new Object();
+
+// JSON: {classes : [{name, id, sl, el,  methods : [{sl, el}, ...]}, ...]}
+clover.pageData = {"classes":[{"el":67,"id":10245,"methods":[{"el":55,"sc":5,"sl":41},{"el":60,"sc":5,"sl":58},{"el":65,"sc":5,"sl":63}],"name":"ImageConverterRendered2PNG","sl":38}]}
+
+// JSON: {test_ID : {"methods": [ID1, ID2, ID3...], "name" : "testXXX() void"}, ...};
+clover.testTargets = {"test_146":{"methods":[{"sl":41},{"sl":58},{"sl":63}],"name":"testPipelineWithLoader","pass":true,"statements":[{"sl":42},{"sl":43},{"sl":44},{"sl":45},{"sl":46},{"sl":49},{"sl":50},{"sl":51},{"sl":52},{"sl":53},{"sl":59},{"sl":64}]},"test_182":{"methods":[{"sl":41},{"sl":58},{"sl":63}],"name":"testPipelineWithoutURIThroughManager","pass":true,"statements":[{"sl":42},{"sl":43},{"sl":44},{"sl":45},{"sl":46},{"sl":49},{"sl":50},{"sl":51},{"sl":52},{"sl":53},{"sl":59},{"sl":64}]},"test_25":{"methods":[{"sl":41},{"sl":58},{"sl":63}],"name":"testPipelineFromURIThroughManager","pass":true,"statements":[{"sl":42},{"sl":43},{"sl":44},{"sl":45},{"sl":46},{"sl":49},{"sl":50},{"sl":51},{"sl":52},{"sl":53},{"sl":59},{"sl":64}]},"test_29":{"methods":[{"sl":58},{"sl":63}],"name":"testImageCache1","pass":true,"statements":[{"sl":59},{"sl":64}]},"test_61":{"methods":[{"sl":41},{"sl":58},{"sl":63}],"name":"testPipelineWithoutLoader","pass":true,"statements":[{"sl":42},{"sl":43},{"sl":44},{"sl":45},{"sl":46},{"sl":49},{"sl":50},{"sl":51},{"sl":52},{"sl":53},{"sl":59},{"sl":64}]}}
+
+// JSON: { lines : [{tests : [testid1, testid2, testid3, ...]}, ...]};
+clover.srcFileLines = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [25, 146, 61, 182], [25, 146, 61, 182], [25, 146, 61, 182], [25, 146, 61, 182], [25, 146, 61, 182], [25, 146, 61, 182], [], [], [25, 146, 61, 182], [25, 146, 61, 182], [25, 146, 61, 182], [25, 146, 61, 182], [25, 146, 61, 182], [], [], [], [], [25, 146, 29, 61, 182], [25, 146, 29, 61, 182], [], [], [], [25, 146, 29, 61, 182], [25, 146, 29, 61, 182], [], [], []]

@@ -1,0 +1,4 @@
+Jan. 26, 2023 11:05:19 P.M. org.apache.xmlgraphics.image.loader.impl.imageio.ImageLoaderImageIO loadImage
+WARNING: Image file:/C:/Users/bogda/Repos/345Help/xmlgraphics-commons-2.8/target/test-classes/org/apache/xmlgraphics/image/loader/impl/gray-vs-cmyk-profile.png has an incompatible color profile. The color profile will be ignored.
+Color model of loaded bitmap: ColorModel: #pixelBits = 16 numComponents = 2 color space = java.awt.color.ICC_ColorSpace@7b5f886d transparency = 3 has alpha = true isAlphaPre = false
+Color model of color profile: ColorModel: #pixelBits = 40 numComponents = 5 color space = java.awt.color.ICC_ColorSpace@591b8f15 transparency = 3 has alpha = true isAlphaPre = false

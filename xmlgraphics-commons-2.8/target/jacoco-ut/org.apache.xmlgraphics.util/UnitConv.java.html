@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UnitConv.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">org.apache.xmlgraphics:xmlgraphics-commons</a> &gt; <a href="index.source.html" class="el_package">org.apache.xmlgraphics.util</a> &gt; <span class="el_source">UnitConv.java</span></div><h1>UnitConv.java</h1><pre class="source lang-java linenums">/* $$ This file has been instrumented by Clover 4.4.1#2019101123313948 $$ *//*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the &quot;License&quot;); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/* $Id: UnitConv.java 1681108 2015-05-22 13:26:12Z ssteiner $ */
+
+package org.apache.xmlgraphics.util;
+
+import java.awt.geom.AffineTransform;
+import java.util.Locale;
+
+/**
+ * Utility class for unit conversions.
+ */
+<span class="pc bpc" id="L28" title="3 of 4 branches missed.">public final class UnitConv {public static class __CLR4_4_1fleflelde03adm{public static com_atlassian_clover.CoverageRecorder R;public static com_atlassian_clover.CloverProfile[] profiles = { };@java.lang.SuppressWarnings(&quot;unchecked&quot;) public static &lt;I, T extends I&gt; I lambdaInc(final int i,final T l,final int si){java.lang.reflect.InvocationHandler h=new java.lang.reflect.InvocationHandler(){public java.lang.Object invoke(java.lang.Object p,java.lang.reflect.Method m,java.lang.Object[] a) throws Throwable{R.inc(i);R.inc(si);try{return m.invoke(l,a);}catch(java.lang.reflect.InvocationTargetException e){throw e.getCause()!=null?e.getCause():new RuntimeException(&quot;Clover failed to invoke instrumented lambda&quot;,e);}}};return (I)java.lang.reflect.Proxy.newProxyInstance(l.getClass().getClassLoader(),l.getClass().getInterfaces(),h);}static{com_atlassian_clover.CoverageRecorder _R=null;try{com_atlassian_clover.CloverVersionInfo.An_old_version_of_clover_is_on_your_compilation_classpath___Please_remove___Required_version_is___4_4_1();if(2019101123313948L!=com_atlassian_clover.CloverVersionInfo.getBuildStamp()){com_atlassian_clover.Clover.l(&quot;[CLOVER] WARNING: The Clover version used in instrumentation does not match the runtime version. You need to run instrumented classes against the same version of Clover that you instrumented with.&quot;);com_atlassian_clover.Clover.l(&quot;[CLOVER] WARNING: Instr=4.4.1#2019101123313948,Runtime=&quot;+com_atlassian_clover.CloverVersionInfo.getReleaseNum()+&quot;#&quot;+com_atlassian_clover.CloverVersionInfo.getBuildStamp());}R=com_atlassian_clover.Clover.getNullRecorder();_R=com_atlassian_clover.Clover.getNullRecorder();_R=com_atlassian_clover.Clover.getRecorder(&quot;\u0043\u003a\u005c\u005c\u0055\u0073\u0065\u0072\u0073\u005c\u005c\u0062\u006f\u0067\u0064\u0061\u005c\u005c\u0052\u0065\u0070\u006f\u0073\u005c\u005c\u0033\u0034\u0035\u0048\u0065\u006c\u0070\u005c\u005c\u0078\u006d\u006c\u0067\u0072\u0061\u0070\u0068\u0069\u0063\u0073\u002d\u0063\u006f\u006d\u006d\u006f\u006e\u0073\u002d\u0032\u002e\u0038\u005c\u005c\u0074\u0061\u0072\u0067\u0065\u0074\u002f\u0063\u006c\u006f\u0076\u0065\u0072\u002f\u0063\u006c\u006f\u0076\u0065\u0072\u002e\u0064\u0062&quot;,1674792292202L,8589935092L,20283,profiles,new java.lang.String[]{&quot;clover.distributed.coverage&quot;,null});}catch(java.lang.SecurityException e){java.lang.System.err.println(&quot;[CLOVER] FATAL ERROR: Clover could not be initialised because it has insufficient security privileges. Please consult the Clover documentation on the security policy file changes required. (&quot;+e.getClass()+&quot;:&quot;+e.getMessage()+&quot;)&quot;);}catch(java.lang.NoClassDefFoundError e){java.lang.System.err.println(&quot;[CLOVER] FATAL ERROR: Clover could not be initialised. Are you sure you have Clover in the runtime classpath? (&quot;+e.getClass()+&quot;:&quot;+e.getMessage()+&quot;)&quot;);}catch(java.lang.Throwable t){java.lang.System.err.println(&quot;[CLOVER] FATAL ERROR: Clover could not be initialised because of an unexpected error. (&quot;+t.getClass()+&quot;:&quot;+t.getMessage()+&quot;)&quot;);}R=_R;}}public static final com_atlassian_clover.TestNameSniffer __CLR4_4_1_TEST_NAME_SNIFFER=com_atlassian_clover.TestNameSniffer.NULL_INSTANCE;</span>
+
+<span class="nc" id="L30">    private UnitConv() {try{__CLR4_4_1fleflelde03adm.R.inc(20210);</span>
+<span class="nc" id="L31">    }finally{__CLR4_4_1fleflelde03adm.R.flushNeeded();}}</span>
+
+    /** conversion factory from millimeters to inches. */
+    public static final float IN2MM = 25.4f;
+
+    /** conversion factory from centimeters to inches. */
+    public static final float IN2CM = 2.54f;
+
+    /** conversion factory from inches to points. */
+    public static final int IN2PT = 72;
+
+    /** Describes the unit pica. */
+    public static final String PICA = &quot;pc&quot;;
+
+    /** Describes the unit point. */
+    public static final String POINT = &quot;pt&quot;;
+
+    /** Describes the unit millimeter. */
+    public static final String MM = &quot;mm&quot;;
+
+    /** Describes the unit centimeter. */
+    public static final String CM = &quot;cm&quot;;
+
+    /** Describes the unit inch. */
+    public static final String INCH = &quot;in&quot;;
+
+    /** Describes the unit millipoint. */
+    public static final String MPT = &quot;mpt&quot;;
+
+        /** Describes the unit pixel. */
+    public static final String PX = &quot;px&quot;;
+
+    /**
+     * Converts millimeters (mm) to points (pt)
+     * @param mm the value in mm
+     * @return the value in pt
+     */
+<span class="fc" id="L68">    public static double mm2pt(double mm) {try{__CLR4_4_1fleflelde03adm.R.inc(20211);</span>
+<span class="fc" id="L69">        __CLR4_4_1fleflelde03adm.R.inc(20212);return mm * IN2PT / IN2MM;</span>
+<span class="fc" id="L70">    }finally{__CLR4_4_1fleflelde03adm.R.flushNeeded();}}</span>
+
+    /**
+     * Converts millimeters (mm) to millipoints (mpt)
+     * @param mm the value in mm
+     * @return the value in mpt
+     */
+<span class="fc" id="L77">    public static double mm2mpt(double mm) {try{__CLR4_4_1fleflelde03adm.R.inc(20213);</span>
+<span class="fc" id="L78">        __CLR4_4_1fleflelde03adm.R.inc(20214);return mm * 1000 * IN2PT / IN2MM;</span>
+<span class="fc" id="L79">    }finally{__CLR4_4_1fleflelde03adm.R.flushNeeded();}}</span>
+
+    /**
+     * Converts points (pt) to millimeters (mm)
+     * @param pt the value in pt
+     * @return the value in mm
+     */
+<span class="fc" id="L86">    public static double pt2mm(double pt) {try{__CLR4_4_1fleflelde03adm.R.inc(20215);</span>
+<span class="fc" id="L87">        __CLR4_4_1fleflelde03adm.R.inc(20216);return pt * IN2MM / IN2PT;</span>
+<span class="fc" id="L88">    }finally{__CLR4_4_1fleflelde03adm.R.flushNeeded();}}</span>
+
+    /**
+     * Converts millimeters (mm) to inches (in)
+     * @param mm the value in mm
+     * @return the value in inches
+     */
+<span class="fc" id="L95">    public static double mm2in(double mm) {try{__CLR4_4_1fleflelde03adm.R.inc(20217);</span>
+<span class="fc" id="L96">        __CLR4_4_1fleflelde03adm.R.inc(20218);return mm / IN2MM;</span>
+<span class="fc" id="L97">    }finally{__CLR4_4_1fleflelde03adm.R.flushNeeded();}}</span>
+
+    /**
+     * Converts inches (in) to millimeters (mm)
+     * @param in the value in inches
+     * @return the value in mm
+     */
+<span class="fc" id="L104">    public static double in2mm(double in) {try{__CLR4_4_1fleflelde03adm.R.inc(20219);</span>
+<span class="fc" id="L105">        __CLR4_4_1fleflelde03adm.R.inc(20220);return in * IN2MM;</span>
+<span class="fc" id="L106">    }finally{__CLR4_4_1fleflelde03adm.R.flushNeeded();}}</span>
+
+    /**
+     * Converts inches (in) to millipoints (mpt)
+     * @param in the value in inches
+     * @return the value in mpt
+     */
+<span class="fc" id="L113">    public static double in2mpt(double in) {try{__CLR4_4_1fleflelde03adm.R.inc(20221);</span>
+<span class="fc" id="L114">        __CLR4_4_1fleflelde03adm.R.inc(20222);return in * IN2PT * 1000;</span>
+<span class="fc" id="L115">    }finally{__CLR4_4_1fleflelde03adm.R.flushNeeded();}}</span>
+
+    /**
+     * Converts inches (in) to points (pt)
+     * @param in the value in inches
+     * @return the value in pt
+     */
+<span class="nc" id="L122">    public static double in2pt(double in) {try{__CLR4_4_1fleflelde03adm.R.inc(20223);</span>
+<span class="nc" id="L123">        __CLR4_4_1fleflelde03adm.R.inc(20224);return in * IN2PT;</span>
+<span class="nc" id="L124">    }finally{__CLR4_4_1fleflelde03adm.R.flushNeeded();}}</span>
+
+    /**
+     * Converts millipoints (mpt) to inches (in)
+     * @param mpt the value in mpt
+     * @return the value in inches
+     */
+<span class="fc" id="L131">    public static double mpt2in(double mpt) {try{__CLR4_4_1fleflelde03adm.R.inc(20225);</span>
+<span class="fc" id="L132">        __CLR4_4_1fleflelde03adm.R.inc(20226);return mpt / IN2PT / 1000;</span>
+<span class="fc" id="L133">    }finally{__CLR4_4_1fleflelde03adm.R.flushNeeded();}}</span>
+
+    /**
+     * Converts millimeters (mm) to pixels (px)
+     * @param mm the value in mm
+     * @param resolution the resolution in dpi (dots per inch)
+     * @return the value in pixels
+     */
+<span class="fc" id="L141">    public static double mm2px(double mm, int resolution) {try{__CLR4_4_1fleflelde03adm.R.inc(20227);</span>
+<span class="fc" id="L142">        __CLR4_4_1fleflelde03adm.R.inc(20228);return mm2in(mm) * resolution;</span>
+<span class="fc" id="L143">    }finally{__CLR4_4_1fleflelde03adm.R.flushNeeded();}}</span>
+
+    /**
+     * Converts millipoints (mpt) to pixels (px)
+     * @param mpt the value in mpt
+     * @param resolution the resolution in dpi (dots per inch)
+     * @return the value in pixels
+     */
+<span class="fc" id="L151">    public static double mpt2px(double mpt, int resolution) {try{__CLR4_4_1fleflelde03adm.R.inc(20229);</span>
+<span class="fc" id="L152">        __CLR4_4_1fleflelde03adm.R.inc(20230);return mpt2in(mpt) * resolution;</span>
+<span class="fc" id="L153">    }finally{__CLR4_4_1fleflelde03adm.R.flushNeeded();}}</span>
+
+    /**
+     * Converts a millipoint-based transformation matrix to points.
+     * @param at a millipoint-based transformation matrix
+     * @return a point-based transformation matrix
+     */
+<span class="nc" id="L160">    public static AffineTransform mptToPt(AffineTransform at) {try{__CLR4_4_1fleflelde03adm.R.inc(20231);</span>
+<span class="nc" id="L161">        __CLR4_4_1fleflelde03adm.R.inc(20232);double[] matrix = new double[6];</span>
+<span class="nc" id="L162">        __CLR4_4_1fleflelde03adm.R.inc(20233);at.getMatrix(matrix);</span>
+        //Convert to points
+<span class="nc" id="L164">        __CLR4_4_1fleflelde03adm.R.inc(20234);matrix[4] = matrix[4] / 1000;</span>
+<span class="nc" id="L165">        __CLR4_4_1fleflelde03adm.R.inc(20235);matrix[5] = matrix[5] / 1000;</span>
+<span class="nc" id="L166">        __CLR4_4_1fleflelde03adm.R.inc(20236);return new AffineTransform(matrix);</span>
+<span class="nc" id="L167">    }finally{__CLR4_4_1fleflelde03adm.R.flushNeeded();}}</span>
+
+    /**
+     * Converts a point-based transformation matrix to millipoints.
+     * @param at a point-based transformation matrix
+     * @return a millipoint-based transformation matrix
+     */
+<span class="nc" id="L174">    public static AffineTransform ptToMpt(AffineTransform at) {try{__CLR4_4_1fleflelde03adm.R.inc(20237);</span>
+<span class="nc" id="L175">        __CLR4_4_1fleflelde03adm.R.inc(20238);double[] matrix = new double[6];</span>
+<span class="nc" id="L176">        __CLR4_4_1fleflelde03adm.R.inc(20239);at.getMatrix(matrix);</span>
+        //Convert to millipoints
+<span class="nc" id="L178">        __CLR4_4_1fleflelde03adm.R.inc(20240);matrix[4] = matrix[4] * 1000;</span>
+<span class="nc" id="L179">        __CLR4_4_1fleflelde03adm.R.inc(20241);matrix[5] = matrix[5] * 1000;</span>
+<span class="nc" id="L180">        __CLR4_4_1fleflelde03adm.R.inc(20242);return new AffineTransform(matrix);</span>
+<span class="nc" id="L181">    }finally{__CLR4_4_1fleflelde03adm.R.flushNeeded();}}</span>
+
+    /**
+     * Convert the given unit length to a dimensionless integer representing
+     * a whole number of base units (milli-points).
+     *
+     * @param value input unit value
+     * @return int millipoints
+     */
+<span class="nc" id="L190">    public static int convert(String value) {try{__CLR4_4_1fleflelde03adm.R.inc(20243);</span>
+<span class="nc" id="L191">        __CLR4_4_1fleflelde03adm.R.inc(20244);double retValue = 0;</span>
+<span class="nc bnc" id="L192" title="All 10 branches missed.">        __CLR4_4_1fleflelde03adm.R.inc(20245);if ((((value != null)&amp;&amp;(__CLR4_4_1fleflelde03adm.R.iget(20246)!=0|true))||(__CLR4_4_1fleflelde03adm.R.iget(20247)==0&amp;false))) {{</span>
+<span class="nc bnc" id="L193" title="All 10 branches missed.">            __CLR4_4_1fleflelde03adm.R.inc(20248);if ((((value.toLowerCase(Locale.getDefault()).indexOf(PX) &gt;= 0)&amp;&amp;(__CLR4_4_1fleflelde03adm.R.iget(20249)!=0|true))||(__CLR4_4_1fleflelde03adm.R.iget(20250)==0&amp;false))) {{</span>
+<span class="nc" id="L194">                __CLR4_4_1fleflelde03adm.R.inc(20251);retValue = Double.parseDouble(value.substring(0, value.length() - 2));</span>
+<span class="nc" id="L195">                __CLR4_4_1fleflelde03adm.R.inc(20252);retValue *= 1000;</span>
+<span class="nc bnc" id="L196" title="All 10 branches missed.">            } }else {__CLR4_4_1fleflelde03adm.R.inc(20253);if ((((value.toLowerCase(Locale.getDefault()).indexOf(INCH) &gt;= 0)&amp;&amp;(__CLR4_4_1fleflelde03adm.R.iget(20254)!=0|true))||(__CLR4_4_1fleflelde03adm.R.iget(20255)==0&amp;false))) {{</span>
+<span class="nc" id="L197">                __CLR4_4_1fleflelde03adm.R.inc(20256);retValue = Double.parseDouble(value.substring(0, value.length() - 2));</span>
+<span class="nc" id="L198">                __CLR4_4_1fleflelde03adm.R.inc(20257);retValue *= 72000;</span>
+<span class="nc bnc" id="L199" title="All 10 branches missed.">            } }else {__CLR4_4_1fleflelde03adm.R.inc(20258);if ((((value.toLowerCase(Locale.getDefault()).indexOf(CM) &gt;= 0)&amp;&amp;(__CLR4_4_1fleflelde03adm.R.iget(20259)!=0|true))||(__CLR4_4_1fleflelde03adm.R.iget(20260)==0&amp;false))) {{</span>
+<span class="nc" id="L200">                __CLR4_4_1fleflelde03adm.R.inc(20261);retValue = Double.parseDouble(value.substring(0, value.length() - 2));</span>
+<span class="nc" id="L201">                __CLR4_4_1fleflelde03adm.R.inc(20262);retValue *= 28346.4567;</span>
+<span class="nc bnc" id="L202" title="All 10 branches missed.">            } }else {__CLR4_4_1fleflelde03adm.R.inc(20263);if ((((value.toLowerCase(Locale.getDefault()).indexOf(MM) &gt;= 0)&amp;&amp;(__CLR4_4_1fleflelde03adm.R.iget(20264)!=0|true))||(__CLR4_4_1fleflelde03adm.R.iget(20265)==0&amp;false))) {{</span>
+<span class="nc" id="L203">                __CLR4_4_1fleflelde03adm.R.inc(20266);retValue = Double.parseDouble(value.substring(0, value.length() - 2));</span>
+<span class="nc" id="L204">                __CLR4_4_1fleflelde03adm.R.inc(20267);retValue *= 2834.64567;</span>
+<span class="nc bnc" id="L205" title="All 10 branches missed.">            } }else {__CLR4_4_1fleflelde03adm.R.inc(20268);if ((((value.toLowerCase(Locale.getDefault()).indexOf(MPT) &gt;= 0)&amp;&amp;(__CLR4_4_1fleflelde03adm.R.iget(20269)!=0|true))||(__CLR4_4_1fleflelde03adm.R.iget(20270)==0&amp;false))) {{</span>
+<span class="nc" id="L206">                __CLR4_4_1fleflelde03adm.R.inc(20271);retValue = Double.parseDouble(value.substring(0, value.length() - 3));</span>
+<span class="nc bnc" id="L207" title="All 10 branches missed.">            } }else {__CLR4_4_1fleflelde03adm.R.inc(20272);if ((((value.toLowerCase(Locale.getDefault()).indexOf(POINT) &gt;= 0)&amp;&amp;(__CLR4_4_1fleflelde03adm.R.iget(20273)!=0|true))||(__CLR4_4_1fleflelde03adm.R.iget(20274)==0&amp;false))) {{</span>
+<span class="nc" id="L208">                __CLR4_4_1fleflelde03adm.R.inc(20275);retValue = Double.parseDouble(value.substring(0, value.length() - 2));</span>
+<span class="nc" id="L209">                __CLR4_4_1fleflelde03adm.R.inc(20276);retValue *= 1000;</span>
+<span class="nc bnc" id="L210" title="All 10 branches missed.">            } }else {__CLR4_4_1fleflelde03adm.R.inc(20277);if ((((value.toLowerCase(Locale.getDefault()).indexOf(PICA) &gt;= 0)&amp;&amp;(__CLR4_4_1fleflelde03adm.R.iget(20278)!=0|true))||(__CLR4_4_1fleflelde03adm.R.iget(20279)==0&amp;false))) {{</span>
+<span class="nc" id="L211">                __CLR4_4_1fleflelde03adm.R.inc(20280);retValue = Double.parseDouble(value.substring(0, value.length() - 2));</span>
+<span class="nc" id="L212">                __CLR4_4_1fleflelde03adm.R.inc(20281);retValue *= 12000;</span>
+            }
+        }}}}}}}}
+<span class="nc" id="L215">        }__CLR4_4_1fleflelde03adm.R.inc(20282);return (int)retValue;</span>
+<span class="nc" id="L216">    }finally{__CLR4_4_1fleflelde03adm.R.flushNeeded();}}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

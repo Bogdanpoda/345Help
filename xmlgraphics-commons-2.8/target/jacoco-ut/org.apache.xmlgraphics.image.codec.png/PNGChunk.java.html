@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PNGChunk.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">org.apache.xmlgraphics:xmlgraphics-commons</a> &gt; <a href="index.source.html" class="el_package">org.apache.xmlgraphics.image.codec.png</a> &gt; <span class="el_source">PNGChunk.java</span></div><h1>PNGChunk.java</h1><pre class="source lang-java linenums">/* $$ This file has been instrumented by Clover 4.4.1#2019101123313948 $$ *//*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the &quot;License&quot;); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/* $Id: PNGChunk.java 1732019 2016-02-24 05:01:10Z gadams $ */
+
+package org.apache.xmlgraphics.image.codec.png;
+
+import java.io.DataInputStream;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+<span class="pc bpc" id="L27" title="3 of 4 branches missed.">public class PNGChunk {public static class __CLR4_4_1r2r2lde037lb{public static com_atlassian_clover.CoverageRecorder R;public static com_atlassian_clover.CloverProfile[] profiles = { };@java.lang.SuppressWarnings(&quot;unchecked&quot;) public static &lt;I, T extends I&gt; I lambdaInc(final int i,final T l,final int si){java.lang.reflect.InvocationHandler h=new java.lang.reflect.InvocationHandler(){public java.lang.Object invoke(java.lang.Object p,java.lang.reflect.Method m,java.lang.Object[] a) throws Throwable{R.inc(i);R.inc(si);try{return m.invoke(l,a);}catch(java.lang.reflect.InvocationTargetException e){throw e.getCause()!=null?e.getCause():new RuntimeException(&quot;Clover failed to invoke instrumented lambda&quot;,e);}}};return (I)java.lang.reflect.Proxy.newProxyInstance(l.getClass().getClassLoader(),l.getClass().getInterfaces(),h);}static{com_atlassian_clover.CoverageRecorder _R=null;try{com_atlassian_clover.CloverVersionInfo.An_old_version_of_clover_is_on_your_compilation_classpath___Please_remove___Required_version_is___4_4_1();if(2019101123313948L!=com_atlassian_clover.CloverVersionInfo.getBuildStamp()){com_atlassian_clover.Clover.l(&quot;[CLOVER] WARNING: The Clover version used in instrumentation does not match the runtime version. You need to run instrumented classes against the same version of Clover that you instrumented with.&quot;);com_atlassian_clover.Clover.l(&quot;[CLOVER] WARNING: Instr=4.4.1#2019101123313948,Runtime=&quot;+com_atlassian_clover.CloverVersionInfo.getReleaseNum()+&quot;#&quot;+com_atlassian_clover.CloverVersionInfo.getBuildStamp());}R=com_atlassian_clover.Clover.getNullRecorder();_R=com_atlassian_clover.Clover.getNullRecorder();_R=com_atlassian_clover.Clover.getRecorder(&quot;\u0043\u003a\u005c\u005c\u0055\u0073\u0065\u0072\u0073\u005c\u005c\u0062\u006f\u0067\u0064\u0061\u005c\u005c\u0052\u0065\u0070\u006f\u0073\u005c\u005c\u0033\u0034\u0035\u0048\u0065\u006c\u0070\u005c\u005c\u0078\u006d\u006c\u0067\u0072\u0061\u0070\u0068\u0069\u0063\u0073\u002d\u0063\u006f\u006d\u006d\u006f\u006e\u0073\u002d\u0032\u002e\u0038\u005c\u005c\u0074\u0061\u0072\u0067\u0065\u0074\u002f\u0063\u006c\u006f\u0076\u0065\u0072\u002f\u0063\u006c\u006f\u0076\u0065\u0072\u002e\u0064\u0062&quot;,1674792292202L,8589935092L,1040,profiles,new java.lang.String[]{&quot;clover.distributed.coverage&quot;,null});}catch(java.lang.SecurityException e){java.lang.System.err.println(&quot;[CLOVER] FATAL ERROR: Clover could not be initialised because it has insufficient security privileges. Please consult the Clover documentation on the security policy file changes required. (&quot;+e.getClass()+&quot;:&quot;+e.getMessage()+&quot;)&quot;);}catch(java.lang.NoClassDefFoundError e){java.lang.System.err.println(&quot;[CLOVER] FATAL ERROR: Clover could not be initialised. Are you sure you have Clover in the runtime classpath? (&quot;+e.getClass()+&quot;:&quot;+e.getMessage()+&quot;)&quot;);}catch(java.lang.Throwable t){java.lang.System.err.println(&quot;[CLOVER] FATAL ERROR: Clover could not be initialised because of an unexpected error. (&quot;+t.getClass()+&quot;:&quot;+t.getMessage()+&quot;)&quot;);}R=_R;}}public static final com_atlassian_clover.TestNameSniffer __CLR4_4_1_TEST_NAME_SNIFFER=com_atlassian_clover.TestNameSniffer.NULL_INSTANCE;</span>
+    int length;
+    int type;
+    byte[] data;
+    int crc;
+
+    String typeString;
+
+    /** logger */
+<span class="fc" id="L36">    protected static final Log log = LogFactory.getLog(PNGChunk.class);</span>
+
+    /**
+     * See http://en.wikipedia.org/wiki/Portable_Network_Graphics for a light explanation;
+     * See http://www.libpng.org/pub/png/spec/1.2/PNG-Chunks.html for the spec.
+     */
+<span class="fc" id="L42">    public enum ChunkType {</span>
+<span class="fc" id="L43">        IHDR, // IHDR must be the first chunk</span>
+<span class="fc" id="L44">        PLTE, // PLTE contains the palette</span>
+<span class="fc" id="L45">        IDAT, // IDAT contains the image, which may be split among multiple IDAT chunks</span>
+<span class="fc" id="L46">        IEND, // IEND marks the image end</span>
+<span class="fc" id="L47">        bKGD, // bKGD gives the default background color</span>
+<span class="fc" id="L48">        cHRM, // cHRM gives the chromaticity coordinates</span>
+<span class="fc" id="L49">        gAMA, // gAMA specifies gamma</span>
+<span class="fc" id="L50">        hIST, // hIST can store the histogram</span>
+<span class="fc" id="L51">        iCCP, // iCCP is an ICC color profile</span>
+<span class="fc" id="L52">        iTXt, // iTXt contains UTF-8 text</span>
+<span class="fc" id="L53">        pHYs, // pHYs holds the intended pixel size</span>
+<span class="fc" id="L54">        sBIT, // sBIT (significant bits) indicates the color-accuracy</span>
+<span class="fc" id="L55">        sPLT, // sPLT suggests a palette to use</span>
+<span class="fc" id="L56">        sRGB, // sRGB indicates that the standard sRGB color space is used</span>
+<span class="fc" id="L57">        sTER, // sTER stereo-image indicator chunk for stereoscopic images</span>
+<span class="fc" id="L58">        tEXt, // tEXt can store text that can be represented in ISO/IEC 8859-1</span>
+<span class="fc" id="L59">        tIME, // tIME stores the time that the image was last changed</span>
+<span class="fc" id="L60">        tRNS, // tRNS contains transparency information</span>
+<span class="fc" id="L61">        zTXt; // zTXt contains compressed text with the same limits as tEXt</span>
+    }
+
+<span class="fc" id="L64">    public PNGChunk(int length, int type, byte[] data, int crc) {try{__CLR4_4_1r2r2lde037lb.R.inc(974);</span>
+<span class="fc" id="L65">        __CLR4_4_1r2r2lde037lb.R.inc(975);this.length = length;</span>
+<span class="fc" id="L66">        __CLR4_4_1r2r2lde037lb.R.inc(976);this.type = type;</span>
+<span class="fc" id="L67">        __CLR4_4_1r2r2lde037lb.R.inc(977);this.data = data;</span>
+<span class="fc" id="L68">        __CLR4_4_1r2r2lde037lb.R.inc(978);this.crc = crc;</span>
+<span class="fc" id="L69">        __CLR4_4_1r2r2lde037lb.R.inc(979);this.typeString = typeIntToString(this.type);</span>
+<span class="fc" id="L70">    }finally{__CLR4_4_1r2r2lde037lb.R.flushNeeded();}}</span>
+
+<span class="fc" id="L72">    public int getLength() {try{__CLR4_4_1r2r2lde037lb.R.inc(980);</span>
+<span class="fc" id="L73">        __CLR4_4_1r2r2lde037lb.R.inc(981);return length;</span>
+<span class="fc" id="L74">    }finally{__CLR4_4_1r2r2lde037lb.R.flushNeeded();}}</span>
+
+<span class="nc" id="L76">    public int getType() {try{__CLR4_4_1r2r2lde037lb.R.inc(982);</span>
+<span class="nc" id="L77">        __CLR4_4_1r2r2lde037lb.R.inc(983);return type;</span>
+<span class="nc" id="L78">    }finally{__CLR4_4_1r2r2lde037lb.R.flushNeeded();}}</span>
+
+<span class="nc" id="L80">    public String getTypeString() {try{__CLR4_4_1r2r2lde037lb.R.inc(984);</span>
+<span class="nc" id="L81">        __CLR4_4_1r2r2lde037lb.R.inc(985);return typeString;</span>
+<span class="nc" id="L82">    }finally{__CLR4_4_1r2r2lde037lb.R.flushNeeded();}}</span>
+
+<span class="fc" id="L84">    public byte[] getData() {try{__CLR4_4_1r2r2lde037lb.R.inc(986);</span>
+<span class="fc" id="L85">        __CLR4_4_1r2r2lde037lb.R.inc(987);return data;</span>
+<span class="fc" id="L86">    }finally{__CLR4_4_1r2r2lde037lb.R.flushNeeded();}}</span>
+
+<span class="fc" id="L88">    public byte getByte(int offset) {try{__CLR4_4_1r2r2lde037lb.R.inc(988);</span>
+<span class="fc" id="L89">        __CLR4_4_1r2r2lde037lb.R.inc(989);return data[offset];</span>
+<span class="fc" id="L90">    }finally{__CLR4_4_1r2r2lde037lb.R.flushNeeded();}}</span>
+
+<span class="fc" id="L92">    public int getInt1(int offset) {try{__CLR4_4_1r2r2lde037lb.R.inc(990);</span>
+<span class="fc" id="L93">        __CLR4_4_1r2r2lde037lb.R.inc(991);return data[offset] &amp; 0xff;</span>
+<span class="fc" id="L94">    }finally{__CLR4_4_1r2r2lde037lb.R.flushNeeded();}}</span>
+
+<span class="fc" id="L96">    public int getInt2(int offset) {try{__CLR4_4_1r2r2lde037lb.R.inc(992);</span>
+<span class="fc" id="L97">        __CLR4_4_1r2r2lde037lb.R.inc(993);return ((data[offset] &amp; 0xff) &lt;&lt; 8) | (data[offset + 1] &amp; 0xff);</span>
+<span class="fc" id="L98">    }finally{__CLR4_4_1r2r2lde037lb.R.flushNeeded();}}</span>
+
+<span class="fc" id="L100">    public int getInt4(int offset) {try{__CLR4_4_1r2r2lde037lb.R.inc(994);</span>
+<span class="fc" id="L101">        __CLR4_4_1r2r2lde037lb.R.inc(995);return ((data[offset] &amp; 0xff) &lt;&lt; 24) | ((data[offset + 1] &amp; 0xff) &lt;&lt; 16)</span>
+                | ((data[offset + 2] &amp; 0xff) &lt;&lt; 8) | (data[offset + 3] &amp; 0xff);
+<span class="fc" id="L103">    }finally{__CLR4_4_1r2r2lde037lb.R.flushNeeded();}}</span>
+
+<span class="nc" id="L105">    public String getString4(int offset) {try{__CLR4_4_1r2r2lde037lb.R.inc(996);</span>
+<span class="nc" id="L106">        __CLR4_4_1r2r2lde037lb.R.inc(997);return &quot;&quot; + (char) data[offset] + (char) data[offset + 1] + (char) data[offset + 2]</span>
+                + (char) data[offset + 3];
+<span class="nc" id="L108">    }finally{__CLR4_4_1r2r2lde037lb.R.flushNeeded();}}</span>
+
+<span class="nc" id="L110">    public boolean isType(String typeName) {try{__CLR4_4_1r2r2lde037lb.R.inc(998);</span>
+<span class="nc" id="L111">        __CLR4_4_1r2r2lde037lb.R.inc(999);return typeString.equals(typeName);</span>
+<span class="nc" id="L112">    }finally{__CLR4_4_1r2r2lde037lb.R.flushNeeded();}}</span>
+
+    /**
+     * Reads the next chunk from the input stream.
+     * @param distream the input stream
+     * @return the chunk
+     */
+<span class="fc" id="L119">    public static PNGChunk readChunk(DataInputStream distream) {try{__CLR4_4_1r2r2lde037lb.R.inc(1000);</span>
+<span class="fc" id="L120">        __CLR4_4_1r2r2lde037lb.R.inc(1001);try {</span>
+<span class="fc" id="L121">            __CLR4_4_1r2r2lde037lb.R.inc(1002);int length = distream.readInt();</span>
+<span class="fc" id="L122">            __CLR4_4_1r2r2lde037lb.R.inc(1003);int type = distream.readInt();</span>
+<span class="fc" id="L123">            __CLR4_4_1r2r2lde037lb.R.inc(1004);byte[] data = new byte[length];</span>
+<span class="fc" id="L124">            __CLR4_4_1r2r2lde037lb.R.inc(1005);distream.readFully(data);</span>
+<span class="fc" id="L125">            __CLR4_4_1r2r2lde037lb.R.inc(1006);int crc = distream.readInt();</span>
+
+<span class="fc" id="L127">            __CLR4_4_1r2r2lde037lb.R.inc(1007);return new PNGChunk(length, type, data, crc);</span>
+<span class="nc" id="L128">        } catch (Exception e) {</span>
+<span class="nc" id="L129">            __CLR4_4_1r2r2lde037lb.R.inc(1008);e.printStackTrace();</span>
+<span class="nc" id="L130">            __CLR4_4_1r2r2lde037lb.R.inc(1009);return null;</span>
+        }
+<span class="fc" id="L132">    }finally{__CLR4_4_1r2r2lde037lb.R.flushNeeded();}}</span>
+
+    /**
+     * Returns the PNG chunk type, a four letter case sensitive ASCII type/name.
+     * @param distream the input stream
+     * @return a four letter case sensitive ASCII type/name
+     */
+<span class="fc" id="L139">    public static String getChunkType(DataInputStream distream) {try{__CLR4_4_1r2r2lde037lb.R.inc(1010);</span>
+<span class="fc" id="L140">        __CLR4_4_1r2r2lde037lb.R.inc(1011);try {</span>
+<span class="fc" id="L141">            __CLR4_4_1r2r2lde037lb.R.inc(1012);distream.mark(8);</span>
+<span class="fc" id="L142">            /* int length = */__CLR4_4_1r2r2lde037lb.R.inc(1013);distream.readInt();</span>
+<span class="fc" id="L143">            __CLR4_4_1r2r2lde037lb.R.inc(1014);int type = distream.readInt();</span>
+<span class="fc" id="L144">            __CLR4_4_1r2r2lde037lb.R.inc(1015);distream.reset();</span>
+
+<span class="fc" id="L146">            __CLR4_4_1r2r2lde037lb.R.inc(1016);return typeIntToString(type);</span>
+<span class="nc" id="L147">        } catch (Exception e) {</span>
+<span class="nc" id="L148">            __CLR4_4_1r2r2lde037lb.R.inc(1017);e.printStackTrace();</span>
+<span class="nc" id="L149">            __CLR4_4_1r2r2lde037lb.R.inc(1018);return null;</span>
+        }
+<span class="fc" id="L151">    }finally{__CLR4_4_1r2r2lde037lb.R.flushNeeded();}}</span>
+
+<span class="fc" id="L153">    private static String typeIntToString(int type) {try{__CLR4_4_1r2r2lde037lb.R.inc(1019);</span>
+<span class="fc" id="L154">        __CLR4_4_1r2r2lde037lb.R.inc(1020);String typeString = &quot;&quot;;</span>
+<span class="fc" id="L155">        __CLR4_4_1r2r2lde037lb.R.inc(1021);typeString += (char) (type &gt;&gt; 24);</span>
+<span class="fc" id="L156">        __CLR4_4_1r2r2lde037lb.R.inc(1022);typeString += (char) ((type &gt;&gt; 16) &amp; 0xff);</span>
+<span class="fc" id="L157">        __CLR4_4_1r2r2lde037lb.R.inc(1023);typeString += (char) ((type &gt;&gt; 8) &amp; 0xff);</span>
+<span class="fc" id="L158">        __CLR4_4_1r2r2lde037lb.R.inc(1024);typeString += (char) (type &amp; 0xff);</span>
+<span class="fc" id="L159">        __CLR4_4_1r2r2lde037lb.R.inc(1025);return typeString;</span>
+<span class="fc" id="L160">    }finally{__CLR4_4_1r2r2lde037lb.R.flushNeeded();}}</span>
+
+    /**
+     * Skips the next chunk from the input stream.
+     * @param distream the input stream
+     * @return true if skipping successful, false otherwise
+     */
+<span class="fc" id="L167">    public static boolean skipChunk(DataInputStream distream) {try{__CLR4_4_1r2r2lde037lb.R.inc(1026);</span>
+<span class="fc" id="L168">        __CLR4_4_1r2r2lde037lb.R.inc(1027);try {</span>
+<span class="fc" id="L169">            __CLR4_4_1r2r2lde037lb.R.inc(1028);int length = distream.readInt();</span>
+<span class="fc" id="L170">            __CLR4_4_1r2r2lde037lb.R.inc(1029);distream.readInt();</span>
+            // is this really faster than reading?
+<span class="fc" id="L172">            __CLR4_4_1r2r2lde037lb.R.inc(1030);int skipped = distream.skipBytes(length);</span>
+<span class="fc" id="L173">            __CLR4_4_1r2r2lde037lb.R.inc(1031);distream.readInt();</span>
+<span class="pc bpc" id="L174" title="7 of 10 branches missed.">            __CLR4_4_1r2r2lde037lb.R.inc(1032);if ((((skipped != length)&amp;&amp;(__CLR4_4_1r2r2lde037lb.R.iget(1033)!=0|true))||(__CLR4_4_1r2r2lde037lb.R.iget(1034)==0&amp;false))) {{</span>
+<span class="nc" id="L175">                __CLR4_4_1r2r2lde037lb.R.inc(1035);log.warn(&quot;Incorrect number of bytes skipped.&quot;);</span>
+<span class="nc" id="L176">                __CLR4_4_1r2r2lde037lb.R.inc(1036);return false;</span>
+            }
+<span class="fc" id="L178">            }__CLR4_4_1r2r2lde037lb.R.inc(1037);return true;</span>
+<span class="nc" id="L179">        } catch (Exception e) {</span>
+<span class="nc" id="L180">            __CLR4_4_1r2r2lde037lb.R.inc(1038);log.warn(e.getMessage());</span>
+<span class="nc" id="L181">            __CLR4_4_1r2r2lde037lb.R.inc(1039);return false;</span>
+        }
+<span class="fc" id="L183">    }finally{__CLR4_4_1r2r2lde037lb.R.flushNeeded();}}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TIFFLZWDecoder.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">org.apache.xmlgraphics:xmlgraphics-commons</a> &gt; <a href="index.source.html" class="el_package">org.apache.xmlgraphics.image.codec.tiff</a> &gt; <span class="el_source">TIFFLZWDecoder.java</span></div><h1>TIFFLZWDecoder.java</h1><pre class="source lang-java linenums">/* $$ This file has been instrumented by Clover 4.4.1#2019101123313948 $$ *//*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the &quot;License&quot;); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/* $Id: TIFFLZWDecoder.java 1804124 2017-08-04 14:13:54Z ssteiner $ */
+
+package org.apache.xmlgraphics.image.codec.tiff;
+
+import org.apache.xmlgraphics.image.codec.util.PropertyUtil;
+
+// CSOFF: InnerAssignment
+// CSOFF: MultipleVariableDeclarations
+// CSOFF: OneStatementPerLine
+// CSOFF: OperatorWrap
+// CSOFF: WhitespaceAround
+
+/**
+ * A class for performing LZW decoding.
+ */
+<span class="nc bnc" id="L33" title="All 4 branches missed.">public class TIFFLZWDecoder {public static class __CLR4_4_16hg6hglde038iu{public static com_atlassian_clover.CoverageRecorder R;public static com_atlassian_clover.CloverProfile[] profiles = { };@java.lang.SuppressWarnings(&quot;unchecked&quot;) public static &lt;I, T extends I&gt; I lambdaInc(final int i,final T l,final int si){java.lang.reflect.InvocationHandler h=new java.lang.reflect.InvocationHandler(){public java.lang.Object invoke(java.lang.Object p,java.lang.reflect.Method m,java.lang.Object[] a) throws Throwable{R.inc(i);R.inc(si);try{return m.invoke(l,a);}catch(java.lang.reflect.InvocationTargetException e){throw e.getCause()!=null?e.getCause():new RuntimeException(&quot;Clover failed to invoke instrumented lambda&quot;,e);}}};return (I)java.lang.reflect.Proxy.newProxyInstance(l.getClass().getClassLoader(),l.getClass().getInterfaces(),h);}static{com_atlassian_clover.CoverageRecorder _R=null;try{com_atlassian_clover.CloverVersionInfo.An_old_version_of_clover_is_on_your_compilation_classpath___Please_remove___Required_version_is___4_4_1();if(2019101123313948L!=com_atlassian_clover.CloverVersionInfo.getBuildStamp()){com_atlassian_clover.Clover.l(&quot;[CLOVER] WARNING: The Clover version used in instrumentation does not match the runtime version. You need to run instrumented classes against the same version of Clover that you instrumented with.&quot;);com_atlassian_clover.Clover.l(&quot;[CLOVER] WARNING: Instr=4.4.1#2019101123313948,Runtime=&quot;+com_atlassian_clover.CloverVersionInfo.getReleaseNum()+&quot;#&quot;+com_atlassian_clover.CloverVersionInfo.getBuildStamp());}R=com_atlassian_clover.Clover.getNullRecorder();_R=com_atlassian_clover.Clover.getNullRecorder();_R=com_atlassian_clover.Clover.getRecorder(&quot;\u0043\u003a\u005c\u005c\u0055\u0073\u0065\u0072\u0073\u005c\u005c\u0062\u006f\u0067\u0064\u0061\u005c\u005c\u0052\u0065\u0070\u006f\u0073\u005c\u005c\u0033\u0034\u0035\u0048\u0065\u006c\u0070\u005c\u005c\u0078\u006d\u006c\u0067\u0072\u0061\u0070\u0068\u0069\u0063\u0073\u002d\u0063\u006f\u006d\u006d\u006f\u006e\u0073\u002d\u0032\u002e\u0038\u005c\u005c\u0074\u0061\u0072\u0067\u0065\u0074\u002f\u0063\u006c\u006f\u0076\u0065\u0072\u002f\u0063\u006c\u006f\u0076\u0065\u0072\u002e\u0064\u0062&quot;,1674792292202L,8589935092L,8526,profiles,new java.lang.String[]{&quot;clover.distributed.coverage&quot;,null});}catch(java.lang.SecurityException e){java.lang.System.err.println(&quot;[CLOVER] FATAL ERROR: Clover could not be initialised because it has insufficient security privileges. Please consult the Clover documentation on the security policy file changes required. (&quot;+e.getClass()+&quot;:&quot;+e.getMessage()+&quot;)&quot;);}catch(java.lang.NoClassDefFoundError e){java.lang.System.err.println(&quot;[CLOVER] FATAL ERROR: Clover could not be initialised. Are you sure you have Clover in the runtime classpath? (&quot;+e.getClass()+&quot;:&quot;+e.getMessage()+&quot;)&quot;);}catch(java.lang.Throwable t){java.lang.System.err.println(&quot;[CLOVER] FATAL ERROR: Clover could not be initialised because of an unexpected error. (&quot;+t.getClass()+&quot;:&quot;+t.getMessage()+&quot;)&quot;);}R=_R;}}public static final com_atlassian_clover.TestNameSniffer __CLR4_4_1_TEST_NAME_SNIFFER=com_atlassian_clover.TestNameSniffer.NULL_INSTANCE;</span>
+
+    byte[][] stringTable;
+    byte[] data;
+    byte[] uncompData;
+    int tableIndex;
+<span class="nc" id="L39">    int bitsToGet = 9;</span>
+    int bytePointer;
+//    int bitPointer;
+    int dstIndex;
+    int w;
+    int predictor;
+    int samplesPerPixel;
+    int nextData;
+    int nextBits;
+
+<span class="nc" id="L49">    int[] andTable = {</span>
+        511,
+        1023,
+        2047,
+        4095
+    };
+
+<span class="nc" id="L56">    public TIFFLZWDecoder(int w, int predictor, int samplesPerPixel) {try{__CLR4_4_16hg6hglde038iu.R.inc(8404);</span>
+<span class="nc" id="L57">        __CLR4_4_16hg6hglde038iu.R.inc(8405);this.w = w;</span>
+<span class="nc" id="L58">        __CLR4_4_16hg6hglde038iu.R.inc(8406);this.predictor = predictor;</span>
+<span class="nc" id="L59">        __CLR4_4_16hg6hglde038iu.R.inc(8407);this.samplesPerPixel = samplesPerPixel;</span>
+<span class="nc" id="L60">    }finally{__CLR4_4_16hg6hglde038iu.R.flushNeeded();}}</span>
+
+    /**
+     * Method to decode LZW compressed data.
+     *
+     * @param data            The compressed data.
+     * @param uncompData      Array to return the uncompressed data in.
+     * @param h               The number of rows the compressed data contains.
+     */
+<span class="nc" id="L69">    public byte[] decode(byte[] data, byte[] uncompData, int h) {try{__CLR4_4_16hg6hglde038iu.R.inc(8408);</span>
+
+<span class="nc bnc" id="L71" title="All 12 branches missed.">        __CLR4_4_16hg6hglde038iu.R.inc(8409);if ((((data[0] == (byte)0x00 &amp;&amp; data[1] == (byte)0x01)&amp;&amp;(__CLR4_4_16hg6hglde038iu.R.iget(8410)!=0|true))||(__CLR4_4_16hg6hglde038iu.R.iget(8411)==0&amp;false))) {{</span>
+<span class="nc" id="L72">            __CLR4_4_16hg6hglde038iu.R.inc(8412);throw new UnsupportedOperationException(PropertyUtil.getString(&quot;TIFFLZWDecoder0&quot;));</span>
+        }
+
+<span class="nc" id="L75">        }__CLR4_4_16hg6hglde038iu.R.inc(8413);initializeStringTable();</span>
+
+<span class="nc" id="L77">        __CLR4_4_16hg6hglde038iu.R.inc(8414);this.data = data;</span>
+//        this.h = h;
+<span class="nc" id="L79">        __CLR4_4_16hg6hglde038iu.R.inc(8415);this.uncompData = uncompData;</span>
+
+        // Initialize pointers
+<span class="nc" id="L82">        __CLR4_4_16hg6hglde038iu.R.inc(8416);bytePointer = 0;</span>
+//        bitPointer = 0;
+<span class="nc" id="L84">        __CLR4_4_16hg6hglde038iu.R.inc(8417);dstIndex = 0;</span>
+
+
+<span class="nc" id="L87">        __CLR4_4_16hg6hglde038iu.R.inc(8418);nextData = 0;</span>
+<span class="nc" id="L88">        __CLR4_4_16hg6hglde038iu.R.inc(8419);nextBits = 0;</span>
+
+<span class="nc" id="L90">        __CLR4_4_16hg6hglde038iu.R.inc(8420);int code;</span>
+<span class="nc" id="L91">        __CLR4_4_16hg6hglde038iu.R.inc(8421);int oldCode = 0;</span>
+<span class="nc" id="L92">        __CLR4_4_16hg6hglde038iu.R.inc(8422);byte[] string;</span>
+
+<span class="nc bnc" id="L94" title="All 4 branches missed.">        __CLR4_4_16hg6hglde038iu.R.inc(8423);while ((code = getNextCode()) != 257</span>
+                &amp;&amp; dstIndex != uncompData.length) {{
+
+<span class="nc bnc" id="L97" title="All 10 branches missed.">            __CLR4_4_16hg6hglde038iu.R.inc(8426);if ((((code == 256)&amp;&amp;(__CLR4_4_16hg6hglde038iu.R.iget(8427)!=0|true))||(__CLR4_4_16hg6hglde038iu.R.iget(8428)==0&amp;false))) {{</span>
+
+<span class="nc" id="L99">                __CLR4_4_16hg6hglde038iu.R.inc(8429);initializeStringTable();</span>
+<span class="nc" id="L100">                __CLR4_4_16hg6hglde038iu.R.inc(8430);code = getNextCode();</span>
+
+<span class="nc bnc" id="L102" title="All 10 branches missed.">                __CLR4_4_16hg6hglde038iu.R.inc(8431);if ((((code == 257)&amp;&amp;(__CLR4_4_16hg6hglde038iu.R.iget(8432)!=0|true))||(__CLR4_4_16hg6hglde038iu.R.iget(8433)==0&amp;false))) {{</span>
+<span class="nc" id="L103">                    __CLR4_4_16hg6hglde038iu.R.inc(8434);break;</span>
+                }
+
+<span class="nc" id="L106">                }__CLR4_4_16hg6hglde038iu.R.inc(8435);writeString(stringTable[code]);</span>
+<span class="nc" id="L107">                __CLR4_4_16hg6hglde038iu.R.inc(8436);oldCode = code;</span>
+
+            } }else {{
+
+<span class="nc bnc" id="L111" title="All 10 branches missed.">                __CLR4_4_16hg6hglde038iu.R.inc(8437);if ((((code &lt; tableIndex)&amp;&amp;(__CLR4_4_16hg6hglde038iu.R.iget(8438)!=0|true))||(__CLR4_4_16hg6hglde038iu.R.iget(8439)==0&amp;false))) {{</span>
+
+<span class="nc" id="L113">                    __CLR4_4_16hg6hglde038iu.R.inc(8440);string = stringTable[code];</span>
+
+<span class="nc" id="L115">                    __CLR4_4_16hg6hglde038iu.R.inc(8441);writeString(string);</span>
+<span class="nc" id="L116">                    __CLR4_4_16hg6hglde038iu.R.inc(8442);addStringToTable(stringTable[oldCode], string[0]);</span>
+<span class="nc" id="L117">                    __CLR4_4_16hg6hglde038iu.R.inc(8443);oldCode = code;</span>
+
+                } }else {{
+
+<span class="nc" id="L121">                    __CLR4_4_16hg6hglde038iu.R.inc(8444);string = stringTable[oldCode];</span>
+<span class="nc" id="L122">                    __CLR4_4_16hg6hglde038iu.R.inc(8445);string = composeString(string, string[0]);</span>
+<span class="nc" id="L123">                    __CLR4_4_16hg6hglde038iu.R.inc(8446);writeString(string);</span>
+<span class="nc" id="L124">                    __CLR4_4_16hg6hglde038iu.R.inc(8447);addStringToTable(string);</span>
+<span class="nc" id="L125">                    __CLR4_4_16hg6hglde038iu.R.inc(8448);oldCode = code;</span>
+                }
+
+            }}
+
+        }}
+
+        // Horizontal Differencing Predictor
+<span class="nc bnc" id="L133" title="All 10 branches missed.">        }__CLR4_4_16hg6hglde038iu.R.inc(8449);if ((((predictor == 2)&amp;&amp;(__CLR4_4_16hg6hglde038iu.R.iget(8450)!=0|true))||(__CLR4_4_16hg6hglde038iu.R.iget(8451)==0&amp;false))) {{</span>
+
+<span class="nc" id="L135">            __CLR4_4_16hg6hglde038iu.R.inc(8452);int count;</span>
+<span class="nc bnc" id="L136" title="All 10 branches missed.">            __CLR4_4_16hg6hglde038iu.R.inc(8453);for (int j = 0; (((j &lt; h)&amp;&amp;(__CLR4_4_16hg6hglde038iu.R.iget(8454)!=0|true))||(__CLR4_4_16hg6hglde038iu.R.iget(8455)==0&amp;false)); j++) {{</span>
+
+<span class="nc" id="L138">                __CLR4_4_16hg6hglde038iu.R.inc(8456);count = samplesPerPixel * (j * w + 1);</span>
+
+<span class="nc bnc" id="L140" title="All 10 branches missed.">                __CLR4_4_16hg6hglde038iu.R.inc(8457);for (int i = samplesPerPixel; (((i &lt; w * samplesPerPixel)&amp;&amp;(__CLR4_4_16hg6hglde038iu.R.iget(8458)!=0|true))||(__CLR4_4_16hg6hglde038iu.R.iget(8459)==0&amp;false)); i++) {{</span>
+
+<span class="nc" id="L142">                    __CLR4_4_16hg6hglde038iu.R.inc(8460);uncompData[count] += uncompData[count - samplesPerPixel];</span>
+<span class="nc" id="L143">                    __CLR4_4_16hg6hglde038iu.R.inc(8461);count++;</span>
+                }
+            }}
+        }}
+
+<span class="nc" id="L148">        }__CLR4_4_16hg6hglde038iu.R.inc(8462);return uncompData;</span>
+<span class="nc" id="L149">    }finally{__CLR4_4_16hg6hglde038iu.R.flushNeeded();}}</span>
+
+
+    /**
+     * Initialize the string table.
+     */
+<span class="nc" id="L155">    public void initializeStringTable() {try{__CLR4_4_16hg6hglde038iu.R.inc(8463);</span>
+
+<span class="nc" id="L157">        __CLR4_4_16hg6hglde038iu.R.inc(8464);stringTable = new byte[4096][];</span>
+
+<span class="nc bnc" id="L159" title="All 10 branches missed.">        __CLR4_4_16hg6hglde038iu.R.inc(8465);for (int i = 0; (((i &lt; 256)&amp;&amp;(__CLR4_4_16hg6hglde038iu.R.iget(8466)!=0|true))||(__CLR4_4_16hg6hglde038iu.R.iget(8467)==0&amp;false)); i++) {{</span>
+<span class="nc" id="L160">            __CLR4_4_16hg6hglde038iu.R.inc(8468);stringTable[i] = new byte[1];</span>
+<span class="nc" id="L161">            __CLR4_4_16hg6hglde038iu.R.inc(8469);stringTable[i][0] = (byte)i;</span>
+        }
+
+<span class="nc" id="L164">        }__CLR4_4_16hg6hglde038iu.R.inc(8470);tableIndex = 258;</span>
+<span class="nc" id="L165">        __CLR4_4_16hg6hglde038iu.R.inc(8471);bitsToGet = 9;</span>
+<span class="nc" id="L166">    }finally{__CLR4_4_16hg6hglde038iu.R.flushNeeded();}}</span>
+
+    /**
+     * Write out the string just uncompressed.
+     */
+<span class="nc" id="L171">    public void writeString(byte[] string) {try{__CLR4_4_16hg6hglde038iu.R.inc(8472);</span>
+
+<span class="nc bnc" id="L173" title="All 2 branches missed.">        __CLR4_4_16hg6hglde038iu.R.inc(8473);for (byte aString : string) {{</span>
+<span class="nc" id="L174">            __CLR4_4_16hg6hglde038iu.R.inc(8474);uncompData[dstIndex++] = aString;</span>
+        }
+<span class="nc" id="L176">    }}finally{__CLR4_4_16hg6hglde038iu.R.flushNeeded();}}</span>
+
+    /**
+     * Add a new string to the string table.
+     */
+<span class="nc" id="L181">    public void addStringToTable(byte[] oldString, byte newString) {try{__CLR4_4_16hg6hglde038iu.R.inc(8475);</span>
+<span class="nc" id="L182">        __CLR4_4_16hg6hglde038iu.R.inc(8476);int length = oldString.length;</span>
+<span class="nc" id="L183">        __CLR4_4_16hg6hglde038iu.R.inc(8477);byte[] string = new byte[length + 1];</span>
+<span class="nc" id="L184">        __CLR4_4_16hg6hglde038iu.R.inc(8478);System.arraycopy(oldString, 0, string, 0, length);</span>
+<span class="nc" id="L185">        __CLR4_4_16hg6hglde038iu.R.inc(8479);string[length] = newString;</span>
+
+        // Add this new String to the table
+<span class="nc" id="L188">        __CLR4_4_16hg6hglde038iu.R.inc(8480);stringTable[tableIndex++] = string;</span>
+
+<span class="nc bnc" id="L190" title="All 10 branches missed.">        __CLR4_4_16hg6hglde038iu.R.inc(8481);if ((((tableIndex == 511)&amp;&amp;(__CLR4_4_16hg6hglde038iu.R.iget(8482)!=0|true))||(__CLR4_4_16hg6hglde038iu.R.iget(8483)==0&amp;false))) {{</span>
+<span class="nc" id="L191">            __CLR4_4_16hg6hglde038iu.R.inc(8484);bitsToGet = 10;</span>
+<span class="nc bnc" id="L192" title="All 10 branches missed.">        } }else {__CLR4_4_16hg6hglde038iu.R.inc(8485);if ((((tableIndex == 1023)&amp;&amp;(__CLR4_4_16hg6hglde038iu.R.iget(8486)!=0|true))||(__CLR4_4_16hg6hglde038iu.R.iget(8487)==0&amp;false))) {{</span>
+<span class="nc" id="L193">            __CLR4_4_16hg6hglde038iu.R.inc(8488);bitsToGet = 11;</span>
+<span class="nc bnc" id="L194" title="All 10 branches missed.">        } }else {__CLR4_4_16hg6hglde038iu.R.inc(8489);if ((((tableIndex == 2047)&amp;&amp;(__CLR4_4_16hg6hglde038iu.R.iget(8490)!=0|true))||(__CLR4_4_16hg6hglde038iu.R.iget(8491)==0&amp;false))) {{</span>
+<span class="nc" id="L195">            __CLR4_4_16hg6hglde038iu.R.inc(8492);bitsToGet = 12;</span>
+        }
+<span class="nc" id="L197">    }}}}finally{__CLR4_4_16hg6hglde038iu.R.flushNeeded();}}</span>
+
+    /**
+     * Add a new string to the string table.
+     */
+<span class="nc" id="L202">    public void addStringToTable(byte[] string) {try{__CLR4_4_16hg6hglde038iu.R.inc(8493);</span>
+
+        // Add this new String to the table
+<span class="nc" id="L205">        __CLR4_4_16hg6hglde038iu.R.inc(8494);stringTable[tableIndex++] = string;</span>
+
+<span class="nc bnc" id="L207" title="All 10 branches missed.">        __CLR4_4_16hg6hglde038iu.R.inc(8495);if ((((tableIndex == 511)&amp;&amp;(__CLR4_4_16hg6hglde038iu.R.iget(8496)!=0|true))||(__CLR4_4_16hg6hglde038iu.R.iget(8497)==0&amp;false))) {{</span>
+<span class="nc" id="L208">            __CLR4_4_16hg6hglde038iu.R.inc(8498);bitsToGet = 10;</span>
+<span class="nc bnc" id="L209" title="All 10 branches missed.">        } }else {__CLR4_4_16hg6hglde038iu.R.inc(8499);if ((((tableIndex == 1023)&amp;&amp;(__CLR4_4_16hg6hglde038iu.R.iget(8500)!=0|true))||(__CLR4_4_16hg6hglde038iu.R.iget(8501)==0&amp;false))) {{</span>
+<span class="nc" id="L210">            __CLR4_4_16hg6hglde038iu.R.inc(8502);bitsToGet = 11;</span>
+<span class="nc bnc" id="L211" title="All 10 branches missed.">        } }else {__CLR4_4_16hg6hglde038iu.R.inc(8503);if ((((tableIndex == 2047)&amp;&amp;(__CLR4_4_16hg6hglde038iu.R.iget(8504)!=0|true))||(__CLR4_4_16hg6hglde038iu.R.iget(8505)==0&amp;false))) {{</span>
+<span class="nc" id="L212">            __CLR4_4_16hg6hglde038iu.R.inc(8506);bitsToGet = 12;</span>
+        }
+<span class="nc" id="L214">    }}}}finally{__CLR4_4_16hg6hglde038iu.R.flushNeeded();}}</span>
+
+    /**
+     * Append &lt;code&gt;newString&lt;/code&gt; to the end of &lt;code&gt;oldString&lt;/code&gt;.
+     */
+<span class="nc" id="L219">    public byte[] composeString(byte[] oldString, byte newString) {try{__CLR4_4_16hg6hglde038iu.R.inc(8507);</span>
+<span class="nc" id="L220">        __CLR4_4_16hg6hglde038iu.R.inc(8508);int length = oldString.length;</span>
+<span class="nc" id="L221">        __CLR4_4_16hg6hglde038iu.R.inc(8509);byte[] string = new byte[length + 1];</span>
+<span class="nc" id="L222">        __CLR4_4_16hg6hglde038iu.R.inc(8510);System.arraycopy(oldString, 0, string, 0, length);</span>
+<span class="nc" id="L223">        __CLR4_4_16hg6hglde038iu.R.inc(8511);string[length] = newString;</span>
+
+<span class="nc" id="L225">        __CLR4_4_16hg6hglde038iu.R.inc(8512);return string;</span>
+<span class="nc" id="L226">    }finally{__CLR4_4_16hg6hglde038iu.R.flushNeeded();}}</span>
+
+    // Returns the next 9, 10, 11 or 12 bits
+<span class="nc" id="L229">    public int getNextCode() {try{__CLR4_4_16hg6hglde038iu.R.inc(8513);</span>
+        // Attempt to get the next code. The exception is caught to make
+        // this robust to cases wherein the EndOfInformation code has been
+        // omitted from a strip. Examples of such cases have been observed
+        // in practice.
+<span class="nc" id="L234">        __CLR4_4_16hg6hglde038iu.R.inc(8514);try {</span>
+<span class="nc" id="L235">            __CLR4_4_16hg6hglde038iu.R.inc(8515);nextData = (nextData &lt;&lt; 8) | (data[bytePointer++] &amp; 0xff);</span>
+<span class="nc" id="L236">            __CLR4_4_16hg6hglde038iu.R.inc(8516);nextBits += 8;</span>
+
+<span class="nc bnc" id="L238" title="All 10 branches missed.">            __CLR4_4_16hg6hglde038iu.R.inc(8517);if ((((nextBits &lt; bitsToGet)&amp;&amp;(__CLR4_4_16hg6hglde038iu.R.iget(8518)!=0|true))||(__CLR4_4_16hg6hglde038iu.R.iget(8519)==0&amp;false))) {{</span>
+<span class="nc" id="L239">                __CLR4_4_16hg6hglde038iu.R.inc(8520);nextData = (nextData &lt;&lt; 8) | (data[bytePointer++] &amp; 0xff);</span>
+<span class="nc" id="L240">                __CLR4_4_16hg6hglde038iu.R.inc(8521);nextBits += 8;</span>
+            }
+
+<span class="nc" id="L243">            }__CLR4_4_16hg6hglde038iu.R.inc(8522);int code =</span>
+                (nextData &gt;&gt; (nextBits - bitsToGet)) &amp; andTable[bitsToGet - 9];
+<span class="nc" id="L245">            __CLR4_4_16hg6hglde038iu.R.inc(8523);nextBits -= bitsToGet;</span>
+
+<span class="nc" id="L247">            __CLR4_4_16hg6hglde038iu.R.inc(8524);return code;</span>
+<span class="nc" id="L248">        } catch (ArrayIndexOutOfBoundsException e) {</span>
+            // Strip not terminated as expected: return EndOfInformation code.
+<span class="nc" id="L250">            __CLR4_4_16hg6hglde038iu.R.inc(8525);return 257;</span>
+        }
+<span class="nc" id="L252">    }finally{__CLR4_4_16hg6hglde038iu.R.flushNeeded();}}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

@@ -1,0 +1,6 @@
+Jan. 26, 2023 11:05:20 P.M. org.apache.xmlgraphics.java2d.GraphicsConfigurationWithoutTransparency getColorModel
+WARNING: Does not support transparencies (alpha channels) in images
+Jan. 26, 2023 11:05:20 P.M. org.apache.xmlgraphics.java2d.GraphicsConfigurationWithoutTransparency createCompatibleImage
+WARNING: Does not support transparencies (alpha channels) in images
+Jan. 26, 2023 11:05:20 P.M. org.apache.xmlgraphics.java2d.GraphicsConfigurationWithoutTransparency createCompatibleImage
+WARNING: Does not support transparencies (alpha channels) in images

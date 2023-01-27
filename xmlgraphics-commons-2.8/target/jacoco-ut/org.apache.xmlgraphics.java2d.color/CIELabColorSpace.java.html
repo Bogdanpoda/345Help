@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CIELabColorSpace.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">org.apache.xmlgraphics:xmlgraphics-commons</a> &gt; <a href="index.source.html" class="el_package">org.apache.xmlgraphics.java2d.color</a> &gt; <span class="el_source">CIELabColorSpace.java</span></div><h1>CIELabColorSpace.java</h1><pre class="source lang-java linenums">/* $$ This file has been instrumented by Clover 4.4.1#2019101123313948 $$ *//*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the &quot;License&quot;); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/* $Id: CIELabColorSpace.java 1051421 2010-12-21 08:54:25Z jeremias $ */
+
+package org.apache.xmlgraphics.java2d.color;
+
+import java.awt.Color;
+import java.awt.color.ColorSpace;
+
+/**
+ * This class defines the CIE L*a*b* (CIE 1976) color space. Valid values for L* are between 0
+ * and 100, for a* and b* between -127 and +127.
+ * @see &lt;a href=&quot;http://en.wikipedia.org/wiki/Lab_color_space&quot;
+ *      &gt;http://en.wikipedia.org/wiki/Lab_color_space&lt;/a&gt;
+ */
+<span class="pc bpc" id="L31" title="3 of 4 branches missed.">@java.lang.SuppressWarnings({&quot;fallthrough&quot;}) public class CIELabColorSpace extends ColorSpace {public static class __CLR4_4_1bmpbmplde039nn{public static com_atlassian_clover.CoverageRecorder R;public static com_atlassian_clover.CloverProfile[] profiles = { };@java.lang.SuppressWarnings(&quot;unchecked&quot;) public static &lt;I, T extends I&gt; I lambdaInc(final int i,final T l,final int si){java.lang.reflect.InvocationHandler h=new java.lang.reflect.InvocationHandler(){public java.lang.Object invoke(java.lang.Object p,java.lang.reflect.Method m,java.lang.Object[] a) throws Throwable{R.inc(i);R.inc(si);try{return m.invoke(l,a);}catch(java.lang.reflect.InvocationTargetException e){throw e.getCause()!=null?e.getCause():new RuntimeException(&quot;Clover failed to invoke instrumented lambda&quot;,e);}}};return (I)java.lang.reflect.Proxy.newProxyInstance(l.getClass().getClassLoader(),l.getClass().getInterfaces(),h);}static{com_atlassian_clover.CoverageRecorder _R=null;try{com_atlassian_clover.CloverVersionInfo.An_old_version_of_clover_is_on_your_compilation_classpath___Please_remove___Required_version_is___4_4_1();if(2019101123313948L!=com_atlassian_clover.CloverVersionInfo.getBuildStamp()){com_atlassian_clover.Clover.l(&quot;[CLOVER] WARNING: The Clover version used in instrumentation does not match the runtime version. You need to run instrumented classes against the same version of Clover that you instrumented with.&quot;);com_atlassian_clover.Clover.l(&quot;[CLOVER] WARNING: Instr=4.4.1#2019101123313948,Runtime=&quot;+com_atlassian_clover.CloverVersionInfo.getReleaseNum()+&quot;#&quot;+com_atlassian_clover.CloverVersionInfo.getBuildStamp());}R=com_atlassian_clover.Clover.getNullRecorder();_R=com_atlassian_clover.Clover.getNullRecorder();_R=com_atlassian_clover.Clover.getRecorder(&quot;\u0043\u003a\u005c\u005c\u0055\u0073\u0065\u0072\u0073\u005c\u005c\u0062\u006f\u0067\u0064\u0061\u005c\u005c\u0052\u0065\u0070\u006f\u0073\u005c\u005c\u0033\u0034\u0035\u0048\u0065\u006c\u0070\u005c\u005c\u0078\u006d\u006c\u0067\u0072\u0061\u0070\u0068\u0069\u0063\u0073\u002d\u0063\u006f\u006d\u006d\u006f\u006e\u0073\u002d\u0032\u002e\u0038\u005c\u005c\u0074\u0061\u0072\u0067\u0065\u0074\u002f\u0063\u006c\u006f\u0076\u0065\u0072\u002f\u0063\u006c\u006f\u0076\u0065\u0072\u002e\u0064\u0062&quot;,1674792292202L,8589935092L,15217,profiles,new java.lang.String[]{&quot;clover.distributed.coverage&quot;,null});}catch(java.lang.SecurityException e){java.lang.System.err.println(&quot;[CLOVER] FATAL ERROR: Clover could not be initialised because it has insufficient security privileges. Please consult the Clover documentation on the security policy file changes required. (&quot;+e.getClass()+&quot;:&quot;+e.getMessage()+&quot;)&quot;);}catch(java.lang.NoClassDefFoundError e){java.lang.System.err.println(&quot;[CLOVER] FATAL ERROR: Clover could not be initialised. Are you sure you have Clover in the runtime classpath? (&quot;+e.getClass()+&quot;:&quot;+e.getMessage()+&quot;)&quot;);}catch(java.lang.Throwable t){java.lang.System.err.println(&quot;[CLOVER] FATAL ERROR: Clover could not be initialised because of an unexpected error. (&quot;+t.getClass()+&quot;:&quot;+t.getMessage()+&quot;)&quot;);}R=_R;}}public static final com_atlassian_clover.TestNameSniffer __CLR4_4_1_TEST_NAME_SNIFFER=com_atlassian_clover.TestNameSniffer.NULL_INSTANCE;</span>
+
+    private static final long serialVersionUID = -1821569090707520704L;
+
+    //CIE XYZ tristimulus values of the reference white point: Observer= 2 degrees, Illuminant= D65
+    private static final float REF_X_D65 = 95.047f;
+    private static final float REF_Y_D65 = 100.000f;
+    private static final float REF_Z_D65 = 108.883f;
+
+    //CIE XYZ tristimulus values of the reference white point: Illuminant= D50
+    private static final float REF_X_D50 = 96.42f;
+    private static final float REF_Y_D50 = 100.00f;
+    private static final float REF_Z_D50 = 82.49f;
+
+    private static final double D = 6.0 / 29.0;
+<span class="fc" id="L46">    private static final double REF_A = 1.0 / (3 * Math.pow(D, 2)); //7.787037...</span>
+    private static final double REF_B = 16.0 / 116.0;
+<span class="fc" id="L48">    private static final double T0 = Math.pow(D, 3); //0.008856...</span>
+
+    private float wpX;
+    private float wpY;
+    private float wpZ;
+
+    /**
+     * Default constructor using the D65 white point.
+     */
+    public CIELabColorSpace() {
+<span class="nc" id="L58">        this(getD65WhitePoint());__CLR4_4_1bmpbmplde039nn.R.inc(15074);try{__CLR4_4_1bmpbmplde039nn.R.inc(15073);</span>
+<span class="nc" id="L59">    }finally{__CLR4_4_1bmpbmplde039nn.R.flushNeeded();}}</span>
+
+    /**
+     * CIE Lab space constructor which allows to give an arbitrary white point.
+     * @param whitePoint the white point in XYZ coordinates (valid values: 0.0f to 1.0f, although
+     * values slightly larger than 1.0f are common)
+     */
+    public CIELabColorSpace(float[] whitePoint) {
+<span class="fc" id="L67">        super(ColorSpace.TYPE_Lab, 3);__CLR4_4_1bmpbmplde039nn.R.inc(15076);try{__CLR4_4_1bmpbmplde039nn.R.inc(15075);</span>
+<span class="fc" id="L68">        __CLR4_4_1bmpbmplde039nn.R.inc(15077);checkNumComponents(whitePoint, 3);</span>
+<span class="fc" id="L69">        __CLR4_4_1bmpbmplde039nn.R.inc(15078);this.wpX = whitePoint[0];</span>
+<span class="fc" id="L70">        __CLR4_4_1bmpbmplde039nn.R.inc(15079);this.wpY = whitePoint[1];</span>
+<span class="fc" id="L71">        __CLR4_4_1bmpbmplde039nn.R.inc(15080);this.wpZ = whitePoint[2];</span>
+<span class="fc" id="L72">    }finally{__CLR4_4_1bmpbmplde039nn.R.flushNeeded();}}</span>
+
+    /**
+     * Returns the D65 white point.
+     * @return the D65 white point.
+     */
+<span class="nc" id="L78">    public static float[] getD65WhitePoint() {try{__CLR4_4_1bmpbmplde039nn.R.inc(15081);</span>
+<span class="nc" id="L79">        __CLR4_4_1bmpbmplde039nn.R.inc(15082);return new float[] {REF_X_D65, REF_Y_D65, REF_Z_D65};</span>
+<span class="nc" id="L80">    }finally{__CLR4_4_1bmpbmplde039nn.R.flushNeeded();}}</span>
+
+    /**
+     * Returns the D50 white point.
+     * @return the D50 white point.
+     */
+<span class="fc" id="L86">    public static float[] getD50WhitePoint() {try{__CLR4_4_1bmpbmplde039nn.R.inc(15083);</span>
+<span class="fc" id="L87">        __CLR4_4_1bmpbmplde039nn.R.inc(15084);return new float[] {REF_X_D50, REF_Y_D50, REF_Z_D50};</span>
+<span class="fc" id="L88">    }finally{__CLR4_4_1bmpbmplde039nn.R.flushNeeded();}}</span>
+
+<span class="fc" id="L90">    private void checkNumComponents(float[] colorvalue) {try{__CLR4_4_1bmpbmplde039nn.R.inc(15085);</span>
+<span class="fc" id="L91">        __CLR4_4_1bmpbmplde039nn.R.inc(15086);checkNumComponents(colorvalue, getNumComponents());</span>
+<span class="fc" id="L92">    }finally{__CLR4_4_1bmpbmplde039nn.R.flushNeeded();}}</span>
+
+<span class="fc" id="L94">    private void checkNumComponents(float[] colorvalue, int expected) {try{__CLR4_4_1bmpbmplde039nn.R.inc(15087);</span>
+<span class="pc bpc" id="L95" title="7 of 10 branches missed.">        __CLR4_4_1bmpbmplde039nn.R.inc(15088);if ((((colorvalue == null)&amp;&amp;(__CLR4_4_1bmpbmplde039nn.R.iget(15089)!=0|true))||(__CLR4_4_1bmpbmplde039nn.R.iget(15090)==0&amp;false))) {{</span>
+<span class="nc" id="L96">            __CLR4_4_1bmpbmplde039nn.R.inc(15091);throw new NullPointerException(&quot;color value may not be null&quot;);</span>
+        }
+<span class="pc bpc" id="L98" title="7 of 10 branches missed.">        }__CLR4_4_1bmpbmplde039nn.R.inc(15092);if ((((colorvalue.length != expected)&amp;&amp;(__CLR4_4_1bmpbmplde039nn.R.iget(15093)!=0|true))||(__CLR4_4_1bmpbmplde039nn.R.iget(15094)==0&amp;false))) {{</span>
+<span class="nc" id="L99">            __CLR4_4_1bmpbmplde039nn.R.inc(15095);throw new IllegalArgumentException(&quot;Expected &quot; + expected</span>
+                    + &quot; components, but got &quot; + colorvalue.length);
+        }
+<span class="fc" id="L102">    }}finally{__CLR4_4_1bmpbmplde039nn.R.flushNeeded();}}</span>
+
+    /**
+     * Returns the configured white point.
+     * @return the white point in CIE XYZ coordinates
+     */
+<span class="nc" id="L108">    public float[] getWhitePoint() {try{__CLR4_4_1bmpbmplde039nn.R.inc(15096);</span>
+<span class="nc" id="L109">        __CLR4_4_1bmpbmplde039nn.R.inc(15097);return new float[] {wpX, wpY, wpZ};</span>
+<span class="nc" id="L110">    }finally{__CLR4_4_1bmpbmplde039nn.R.flushNeeded();}}</span>
+
+    private static final String CIE_LAB_ONLY_HAS_3_COMPONENTS = &quot;CIE Lab only has 3 components!&quot;;
+
+    /** {@inheritDoc} */
+    @Override
+<span class="fc" id="L116">    public float getMinValue(int component) {try{__CLR4_4_1bmpbmplde039nn.R.inc(15098);</span>
+<span class="pc bpc" id="L117" title="1 of 4 branches missed.">        boolean __CLB4_4_1_bool0=false;__CLR4_4_1bmpbmplde039nn.R.inc(15099);switch (component) {</span>
+<span class="pc bpc" id="L118" title="1 of 2 branches missed.">        case 0:if (!__CLB4_4_1_bool0) {__CLR4_4_1bmpbmplde039nn.R.inc(15100);__CLB4_4_1_bool0=true;} //L*</span>
+<span class="fc" id="L119">            __CLR4_4_1bmpbmplde039nn.R.inc(15101);return 0f;</span>
+<span class="pc bpc" id="L120" title="1 of 2 branches missed.">        case 1:if (!__CLB4_4_1_bool0) {__CLR4_4_1bmpbmplde039nn.R.inc(15102);__CLB4_4_1_bool0=true;} //a*</span>
+<span class="fc bfc" id="L121" title="All 2 branches covered.">        case 2:if (!__CLB4_4_1_bool0) {__CLR4_4_1bmpbmplde039nn.R.inc(15103);__CLB4_4_1_bool0=true;} //b*</span>
+<span class="fc" id="L122">            __CLR4_4_1bmpbmplde039nn.R.inc(15104);return -128f;</span>
+<span class="nc bnc" id="L123" title="All 2 branches missed.">        default:if (!__CLB4_4_1_bool0) {__CLR4_4_1bmpbmplde039nn.R.inc(15105);__CLB4_4_1_bool0=true;}</span>
+<span class="nc" id="L124">            __CLR4_4_1bmpbmplde039nn.R.inc(15106);throw new IllegalArgumentException(CIE_LAB_ONLY_HAS_3_COMPONENTS);</span>
+        }
+<span class="fc" id="L126">    }finally{__CLR4_4_1bmpbmplde039nn.R.flushNeeded();}}</span>
+
+    /** {@inheritDoc} */
+    @Override
+<span class="fc" id="L130">    public float getMaxValue(int component) {try{__CLR4_4_1bmpbmplde039nn.R.inc(15107);</span>
+<span class="pc bpc" id="L131" title="1 of 4 branches missed.">        boolean __CLB4_4_1_bool1=false;__CLR4_4_1bmpbmplde039nn.R.inc(15108);switch (component) {</span>
+<span class="pc bpc" id="L132" title="1 of 2 branches missed.">        case 0:if (!__CLB4_4_1_bool1) {__CLR4_4_1bmpbmplde039nn.R.inc(15109);__CLB4_4_1_bool1=true;} //L*</span>
+<span class="fc" id="L133">            __CLR4_4_1bmpbmplde039nn.R.inc(15110);return 100f;</span>
+<span class="pc bpc" id="L134" title="1 of 2 branches missed.">        case 1:if (!__CLB4_4_1_bool1) {__CLR4_4_1bmpbmplde039nn.R.inc(15111);__CLB4_4_1_bool1=true;} //a*</span>
+<span class="fc bfc" id="L135" title="All 2 branches covered.">        case 2:if (!__CLB4_4_1_bool1) {__CLR4_4_1bmpbmplde039nn.R.inc(15112);__CLB4_4_1_bool1=true;} //b*</span>
+<span class="fc" id="L136">            __CLR4_4_1bmpbmplde039nn.R.inc(15113);return 128f;</span>
+<span class="nc bnc" id="L137" title="All 2 branches missed.">        default:if (!__CLB4_4_1_bool1) {__CLR4_4_1bmpbmplde039nn.R.inc(15114);__CLB4_4_1_bool1=true;}</span>
+<span class="nc" id="L138">            __CLR4_4_1bmpbmplde039nn.R.inc(15115);throw new IllegalArgumentException(CIE_LAB_ONLY_HAS_3_COMPONENTS);</span>
+        }
+<span class="fc" id="L140">    }finally{__CLR4_4_1bmpbmplde039nn.R.flushNeeded();}}</span>
+
+    /** {@inheritDoc} */
+    @Override
+<span class="nc" id="L144">    public String getName(int component) {try{__CLR4_4_1bmpbmplde039nn.R.inc(15116);</span>
+<span class="nc bnc" id="L145" title="All 4 branches missed.">        boolean __CLB4_4_1_bool2=false;__CLR4_4_1bmpbmplde039nn.R.inc(15117);switch (component) {</span>
+<span class="nc bnc" id="L146" title="All 2 branches missed.">        case 0:if (!__CLB4_4_1_bool2) {__CLR4_4_1bmpbmplde039nn.R.inc(15118);__CLB4_4_1_bool2=true;}</span>
+<span class="nc" id="L147">            __CLR4_4_1bmpbmplde039nn.R.inc(15119);return &quot;L*&quot;;</span>
+<span class="nc bnc" id="L148" title="All 2 branches missed.">        case 1:if (!__CLB4_4_1_bool2) {__CLR4_4_1bmpbmplde039nn.R.inc(15120);__CLB4_4_1_bool2=true;}</span>
+<span class="nc" id="L149">            __CLR4_4_1bmpbmplde039nn.R.inc(15121);return &quot;a*&quot;;</span>
+<span class="nc bnc" id="L150" title="All 2 branches missed.">        case 2:if (!__CLB4_4_1_bool2) {__CLR4_4_1bmpbmplde039nn.R.inc(15122);__CLB4_4_1_bool2=true;}</span>
+<span class="nc" id="L151">            __CLR4_4_1bmpbmplde039nn.R.inc(15123);return &quot;b*&quot;;</span>
+<span class="nc bnc" id="L152" title="All 2 branches missed.">        default:if (!__CLB4_4_1_bool2) {__CLR4_4_1bmpbmplde039nn.R.inc(15124);__CLB4_4_1_bool2=true;}</span>
+<span class="nc" id="L153">            __CLR4_4_1bmpbmplde039nn.R.inc(15125);throw new IllegalArgumentException(CIE_LAB_ONLY_HAS_3_COMPONENTS);</span>
+        }
+<span class="nc" id="L155">    }finally{__CLR4_4_1bmpbmplde039nn.R.flushNeeded();}}</span>
+
+    //Note: the conversion functions used here were mostly borrowed from Apache Commons Sanselan
+    //and adjusted to the local requirements.
+
+    /** {@inheritDoc} */
+    @Override
+<span class="nc" id="L162">    public float[] fromCIEXYZ(float[] colorvalue) {try{__CLR4_4_1bmpbmplde039nn.R.inc(15126);</span>
+<span class="nc" id="L163">        __CLR4_4_1bmpbmplde039nn.R.inc(15127);checkNumComponents(colorvalue, 3);</span>
+<span class="nc" id="L164">        __CLR4_4_1bmpbmplde039nn.R.inc(15128);float x = colorvalue[0];</span>
+<span class="nc" id="L165">        __CLR4_4_1bmpbmplde039nn.R.inc(15129);float y = colorvalue[1];</span>
+<span class="nc" id="L166">        __CLR4_4_1bmpbmplde039nn.R.inc(15130);float z = colorvalue[2];</span>
+
+<span class="nc" id="L168">        __CLR4_4_1bmpbmplde039nn.R.inc(15131);double varX = x / wpX;</span>
+<span class="nc" id="L169">        __CLR4_4_1bmpbmplde039nn.R.inc(15132);double varY = y / wpY;</span>
+<span class="nc" id="L170">        __CLR4_4_1bmpbmplde039nn.R.inc(15133);double varZ = z / wpZ;</span>
+
+<span class="nc bnc" id="L172" title="All 10 branches missed.">        __CLR4_4_1bmpbmplde039nn.R.inc(15134);if ((((varX &gt; T0)&amp;&amp;(__CLR4_4_1bmpbmplde039nn.R.iget(15135)!=0|true))||(__CLR4_4_1bmpbmplde039nn.R.iget(15136)==0&amp;false))) {{</span>
+<span class="nc" id="L173">            __CLR4_4_1bmpbmplde039nn.R.inc(15137);varX = Math.pow(varX, (1 / 3.0));</span>
+        } }else {{
+<span class="nc" id="L175">            __CLR4_4_1bmpbmplde039nn.R.inc(15138);varX = (REF_A * varX) + REF_B;</span>
+        }
+<span class="nc bnc" id="L177" title="All 10 branches missed.">        }__CLR4_4_1bmpbmplde039nn.R.inc(15139);if ((((varY &gt; T0)&amp;&amp;(__CLR4_4_1bmpbmplde039nn.R.iget(15140)!=0|true))||(__CLR4_4_1bmpbmplde039nn.R.iget(15141)==0&amp;false))) {{</span>
+<span class="nc" id="L178">            __CLR4_4_1bmpbmplde039nn.R.inc(15142);varY = Math.pow(varY, 1 / 3.0);</span>
+        } }else {{
+<span class="nc" id="L180">            __CLR4_4_1bmpbmplde039nn.R.inc(15143);varY = (REF_A * varY) + REF_B;</span>
+        }
+<span class="nc bnc" id="L182" title="All 10 branches missed.">        }__CLR4_4_1bmpbmplde039nn.R.inc(15144);if ((((varZ &gt; T0)&amp;&amp;(__CLR4_4_1bmpbmplde039nn.R.iget(15145)!=0|true))||(__CLR4_4_1bmpbmplde039nn.R.iget(15146)==0&amp;false))) {{</span>
+<span class="nc" id="L183">            __CLR4_4_1bmpbmplde039nn.R.inc(15147);varZ = Math.pow(varZ, 1 / 3.0);</span>
+        } }else {{
+<span class="nc" id="L185">            __CLR4_4_1bmpbmplde039nn.R.inc(15148);varZ = (REF_A * varZ) + REF_B;</span>
+        }
+
+<span class="nc" id="L188">        }__CLR4_4_1bmpbmplde039nn.R.inc(15149);float l = (float)((116 * varY) - 16);</span>
+<span class="nc" id="L189">        __CLR4_4_1bmpbmplde039nn.R.inc(15150);float a = (float)(500 * (varX - varY));</span>
+<span class="nc" id="L190">        __CLR4_4_1bmpbmplde039nn.R.inc(15151);float b = (float)(200 * (varY - varZ));</span>
+
+        //Normalize to range 0.0..1.0
+<span class="nc" id="L193">        __CLR4_4_1bmpbmplde039nn.R.inc(15152);l = normalize(l, 0);</span>
+<span class="nc" id="L194">        __CLR4_4_1bmpbmplde039nn.R.inc(15153);a = normalize(a, 1);</span>
+<span class="nc" id="L195">        __CLR4_4_1bmpbmplde039nn.R.inc(15154);b = normalize(b, 2);</span>
+<span class="nc" id="L196">        __CLR4_4_1bmpbmplde039nn.R.inc(15155);return new float[] {l, a, b};</span>
+<span class="nc" id="L197">    }finally{__CLR4_4_1bmpbmplde039nn.R.flushNeeded();}}</span>
+
+    /** {@inheritDoc} */
+    @Override
+<span class="nc" id="L201">    public float[] fromRGB(float[] rgbvalue) {try{__CLR4_4_1bmpbmplde039nn.R.inc(15156);</span>
+<span class="nc" id="L202">        __CLR4_4_1bmpbmplde039nn.R.inc(15157);ColorSpace sRGB = ColorSpace.getInstance(ColorSpace.CS_sRGB);</span>
+<span class="nc" id="L203">        __CLR4_4_1bmpbmplde039nn.R.inc(15158);float[] xyz = sRGB.toCIEXYZ(rgbvalue);</span>
+<span class="nc" id="L204">        __CLR4_4_1bmpbmplde039nn.R.inc(15159);return fromCIEXYZ(xyz);</span>
+<span class="nc" id="L205">    }finally{__CLR4_4_1bmpbmplde039nn.R.flushNeeded();}}</span>
+
+    /** {@inheritDoc} */
+    @Override
+<span class="fc" id="L209">    public float[] toCIEXYZ(float[] colorvalue) {try{__CLR4_4_1bmpbmplde039nn.R.inc(15160);</span>
+<span class="fc" id="L210">        __CLR4_4_1bmpbmplde039nn.R.inc(15161);checkNumComponents(colorvalue);</span>
+        //Scale to native value range
+<span class="fc" id="L212">        __CLR4_4_1bmpbmplde039nn.R.inc(15162);float l = denormalize(colorvalue[0], 0);</span>
+<span class="fc" id="L213">        __CLR4_4_1bmpbmplde039nn.R.inc(15163);float a = denormalize(colorvalue[1], 1);</span>
+<span class="fc" id="L214">        __CLR4_4_1bmpbmplde039nn.R.inc(15164);float b = denormalize(colorvalue[2], 2);</span>
+
+<span class="fc" id="L216">        __CLR4_4_1bmpbmplde039nn.R.inc(15165);return toCIEXYZNative(l, a, b);</span>
+<span class="fc" id="L217">    }finally{__CLR4_4_1bmpbmplde039nn.R.flushNeeded();}}</span>
+
+    /**
+     * Transforms a color value assumed to be in this {@link ColorSpace}
+     * into the CS_CIEXYZ conversion color space. This method uses component values
+     * in CIE Lab's native color ranges rather than the normalized values between 0 and 1.
+     * @param l the L* component (values between 0 and 100)
+     * @param a the a* component (usually between -128 and +128)
+     * @param b the b* component (usually between -128 and +128)
+     * @return the XYZ color values
+     * @see #toCIEXYZ(float[])
+     */
+<span class="fc" id="L229">    public float[] toCIEXYZNative(float l, float a, float b) {try{__CLR4_4_1bmpbmplde039nn.R.inc(15166);</span>
+<span class="fc" id="L230">        __CLR4_4_1bmpbmplde039nn.R.inc(15167);double varY = (l + 16) / 116.0;</span>
+<span class="fc" id="L231">        __CLR4_4_1bmpbmplde039nn.R.inc(15168);double varX = a / 500 + varY;</span>
+<span class="fc" id="L232">        __CLR4_4_1bmpbmplde039nn.R.inc(15169);double varZ = varY - b / 200.0;</span>
+
+<span class="pc bpc" id="L234" title="7 of 10 branches missed.">        __CLR4_4_1bmpbmplde039nn.R.inc(15170);if ((((Math.pow(varY, 3) &gt; T0)&amp;&amp;(__CLR4_4_1bmpbmplde039nn.R.iget(15171)!=0|true))||(__CLR4_4_1bmpbmplde039nn.R.iget(15172)==0&amp;false))) {{</span>
+<span class="fc" id="L235">            __CLR4_4_1bmpbmplde039nn.R.inc(15173);varY = Math.pow(varY, 3);</span>
+        } }else {{
+<span class="nc" id="L237">            __CLR4_4_1bmpbmplde039nn.R.inc(15174);varY = (varY - 16 / 116.0) / REF_A;</span>
+        }
+<span class="pc bpc" id="L239" title="7 of 10 branches missed.">        }__CLR4_4_1bmpbmplde039nn.R.inc(15175);if ((((Math.pow(varX, 3) &gt; T0)&amp;&amp;(__CLR4_4_1bmpbmplde039nn.R.iget(15176)!=0|true))||(__CLR4_4_1bmpbmplde039nn.R.iget(15177)==0&amp;false))) {{</span>
+<span class="fc" id="L240">            __CLR4_4_1bmpbmplde039nn.R.inc(15178);varX = Math.pow(varX, 3);</span>
+        } }else {{
+<span class="nc" id="L242">            __CLR4_4_1bmpbmplde039nn.R.inc(15179);varX = (varX - 16 / 116.0) / REF_A;</span>
+        }
+<span class="pc bpc" id="L244" title="7 of 10 branches missed.">        }__CLR4_4_1bmpbmplde039nn.R.inc(15180);if ((((Math.pow(varZ, 3) &gt; T0)&amp;&amp;(__CLR4_4_1bmpbmplde039nn.R.iget(15181)!=0|true))||(__CLR4_4_1bmpbmplde039nn.R.iget(15182)==0&amp;false))) {{</span>
+<span class="fc" id="L245">            __CLR4_4_1bmpbmplde039nn.R.inc(15183);varZ = Math.pow(varZ, 3);</span>
+        } }else {{
+<span class="nc" id="L247">            __CLR4_4_1bmpbmplde039nn.R.inc(15184);varZ = (varZ - 16 / 116.0) / REF_A;</span>
+        }
+
+<span class="fc" id="L250">        }__CLR4_4_1bmpbmplde039nn.R.inc(15185);float x = (float)(wpX * varX / 100);</span>
+<span class="fc" id="L251">        __CLR4_4_1bmpbmplde039nn.R.inc(15186);float y = (float)(wpY * varY / 100);</span>
+<span class="fc" id="L252">        __CLR4_4_1bmpbmplde039nn.R.inc(15187);float z = (float)(wpZ * varZ / 100);</span>
+
+<span class="fc" id="L254">        __CLR4_4_1bmpbmplde039nn.R.inc(15188);return new float[] {x, y, z};</span>
+<span class="fc" id="L255">    }finally{__CLR4_4_1bmpbmplde039nn.R.flushNeeded();}}</span>
+
+    /** {@inheritDoc} */
+    @Override
+<span class="fc" id="L259">    public float[] toRGB(float[] colorvalue) {try{__CLR4_4_1bmpbmplde039nn.R.inc(15189);</span>
+<span class="fc" id="L260">        __CLR4_4_1bmpbmplde039nn.R.inc(15190);ColorSpace sRGB = ColorSpace.getInstance(ColorSpace.CS_sRGB);</span>
+<span class="fc" id="L261">        __CLR4_4_1bmpbmplde039nn.R.inc(15191);float[] xyz = toCIEXYZ(colorvalue);</span>
+<span class="fc" id="L262">        __CLR4_4_1bmpbmplde039nn.R.inc(15192);return sRGB.fromCIEXYZ(xyz);</span>
+<span class="fc" id="L263">    }finally{__CLR4_4_1bmpbmplde039nn.R.flushNeeded();}}</span>
+
+<span class="fc" id="L265">    private float getNativeValueRange(int component) {try{__CLR4_4_1bmpbmplde039nn.R.inc(15193);</span>
+<span class="fc" id="L266">        __CLR4_4_1bmpbmplde039nn.R.inc(15194);return getMaxValue(component) - getMinValue(component);</span>
+<span class="fc" id="L267">    }finally{__CLR4_4_1bmpbmplde039nn.R.flushNeeded();}}</span>
+
+<span class="fc" id="L269">    private float normalize(float value, int component) {try{__CLR4_4_1bmpbmplde039nn.R.inc(15195);</span>
+<span class="fc" id="L270">        __CLR4_4_1bmpbmplde039nn.R.inc(15196);return (value - getMinValue(component)) / getNativeValueRange(component);</span>
+<span class="fc" id="L271">    }finally{__CLR4_4_1bmpbmplde039nn.R.flushNeeded();}}</span>
+
+<span class="fc" id="L273">    private float denormalize(float value, int component) {try{__CLR4_4_1bmpbmplde039nn.R.inc(15197);</span>
+<span class="fc" id="L274">        __CLR4_4_1bmpbmplde039nn.R.inc(15198);return value * getNativeValueRange(component) + getMinValue(component);</span>
+<span class="fc" id="L275">    }finally{__CLR4_4_1bmpbmplde039nn.R.flushNeeded();}}</span>
+
+    /**
+     * Converts normalized (0..1) color components to CIE L*a*b*'s native value range.
+     * @param comps the normalized components.
+     * @return the denormalized components
+     */
+<span class="nc" id="L282">    public float[] toNativeComponents(float[] comps) {try{__CLR4_4_1bmpbmplde039nn.R.inc(15199);</span>
+<span class="nc" id="L283">        __CLR4_4_1bmpbmplde039nn.R.inc(15200);checkNumComponents(comps);</span>
+<span class="nc" id="L284">        __CLR4_4_1bmpbmplde039nn.R.inc(15201);float[] nativeComps = new float[comps.length];</span>
+<span class="nc bnc" id="L285" title="All 10 branches missed.">        __CLR4_4_1bmpbmplde039nn.R.inc(15202);for (int i = 0, c = comps.length; (((i &lt; c)&amp;&amp;(__CLR4_4_1bmpbmplde039nn.R.iget(15203)!=0|true))||(__CLR4_4_1bmpbmplde039nn.R.iget(15204)==0&amp;false)); i++) {{</span>
+<span class="nc" id="L286">            __CLR4_4_1bmpbmplde039nn.R.inc(15205);nativeComps[i] = denormalize(comps[i], i);</span>
+        }
+<span class="nc" id="L288">        }__CLR4_4_1bmpbmplde039nn.R.inc(15206);return nativeComps;</span>
+<span class="nc" id="L289">    }finally{__CLR4_4_1bmpbmplde039nn.R.flushNeeded();}}</span>
+
+    /**
+     * Creates a {@link Color} instance from color values usually used by the L*a*b* color space
+     * by scaling them to the 0.0..1.0 range expected by Color's constructor.
+     * @param colorvalue the original color values
+     *                  (native value range, i.e. not normalized to 0.0..1.0)
+     * @param alpha the alpha component
+     * @return the requested color instance
+     */
+<span class="fc" id="L299">    public Color toColor(float[] colorvalue, float alpha) {try{__CLR4_4_1bmpbmplde039nn.R.inc(15207);</span>
+<span class="fc" id="L300">        __CLR4_4_1bmpbmplde039nn.R.inc(15208);int c = colorvalue.length;</span>
+<span class="fc" id="L301">        __CLR4_4_1bmpbmplde039nn.R.inc(15209);float[] normalized = new float[c];</span>
+<span class="pc bpc" id="L302" title="4 of 10 branches missed.">        __CLR4_4_1bmpbmplde039nn.R.inc(15210);for (int i = 0; (((i &lt; c)&amp;&amp;(__CLR4_4_1bmpbmplde039nn.R.iget(15211)!=0|true))||(__CLR4_4_1bmpbmplde039nn.R.iget(15212)==0&amp;false)); i++) {{</span>
+<span class="fc" id="L303">            __CLR4_4_1bmpbmplde039nn.R.inc(15213);normalized[i] = normalize(colorvalue[i], i);</span>
+        }
+        //Using ColorWithAlternatives for better equals() functionality
+<span class="fc" id="L306">        }__CLR4_4_1bmpbmplde039nn.R.inc(15214);return new ColorWithAlternatives(this, normalized, alpha, null);</span>
+<span class="fc" id="L307">    }finally{__CLR4_4_1bmpbmplde039nn.R.flushNeeded();}}</span>
+
+    /**
+     * Creates a {@link Color} instance from color values usually used by the L*a*b* color space
+     * by scaling them to the 0.0..1.0 range expected by Color's constructor.
+     * @param l the L* component (values between 0 and 100)
+     * @param a the a* component (usually between -128 and +127)
+     * @param b the b* component (usually between -128 and +127)
+     * @param alpha the alpha component (values between 0 and 1)
+     * @return the requested color instance
+     */
+<span class="fc" id="L318">    public Color toColor(float l, float a, float b, float alpha) {try{__CLR4_4_1bmpbmplde039nn.R.inc(15215);</span>
+<span class="fc" id="L319">        __CLR4_4_1bmpbmplde039nn.R.inc(15216);return toColor(new float[] {l, a, b}, alpha);</span>
+<span class="fc" id="L320">    }finally{__CLR4_4_1bmpbmplde039nn.R.flushNeeded();}}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
